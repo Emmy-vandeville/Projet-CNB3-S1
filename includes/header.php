@@ -7,7 +7,7 @@
 
     <?php
 
-require_once('includes/fonction.php');
+require_once('fonction.php');
 
 $topmenu[] = array(
   'libelle' => 'Accueil',
