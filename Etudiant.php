@@ -6,6 +6,6 @@
     <title>Page_etudiant</title>
 </head>
 <body>
-    
+    <?php require_once('includes/header.php'); ?>
 </body>
 </html>
