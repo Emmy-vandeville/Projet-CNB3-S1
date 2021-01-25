@@ -11,9 +11,6 @@
 require_once('fonction.php');
 
 $topmenu[] = array(
-  'libelle' => 'Accueil',
-  'url' => getRootPath().'index.php');
-$topmenu[] = array(
   'libelle' => 'Mes photos',
   'url' => getRootPath().'photos.php');
 $topmenu[] = array(
