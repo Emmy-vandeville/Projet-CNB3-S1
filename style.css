@@ -36,7 +36,9 @@
   }
 }
 /* FIN code de la barre de navigation */
-
+.selected {
+  border: 3px solid pink;
+}
 /**/
 header {
 	text-align: center;
