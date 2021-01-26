@@ -65,3 +65,61 @@ footer a {
   text-decoration: none;
 	color:  #6A847A;
 }
+
+/* code formulaire */
+form {
+  margin: 3% 35% 0;
+  padding: 0;
+  width: auto;
+}
+
+fieldset {
+  border: 0.1rem solid grey;
+  margin: 5%;
+  padding: 3%;
+  border-radius: 4%;
+}
+
+input {
+  background-color: #FFFFFF;
+  border: 0.08rem solid black;
+  margin: 8% auto;
+  text-align: center;
+  color: black;
+  width: 70%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+button {
+  color: white;
+  border: 0;
+  padding: 3% 0;
+  cursor: pointer;
+  border-radius: 1rem;
+  display: block;
+  margin: 5% auto 5%;
+  font-size: 150%;
+}
+
+.form {
+  margin: 3% 25% 0;
+  width: auto;
+}
+
+.field {
+  display: block;
+}
+
+.label {
+  width: 70%;
+  /*font-family: 'Josefin Sans', sans-serif;*/
+  margin: 5% auto 2%;
+}
+
+.input {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
