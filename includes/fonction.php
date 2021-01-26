@@ -1,6 +1,6 @@
 <?php
 function getRootPath() {
-  $path = '/Projet_CNB3_S1/';
+  $path = '/Projet-CNB3-S1/';
   return ($path);
 }
 ?>
