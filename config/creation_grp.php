@@ -16,9 +16,9 @@ if (isset($_POST['ajout'])){
   }
 
   require_once('configdb.php');
-  for (int i=1; i<= $nb_grp; i++) {
-      $num_team = i;
-      $login = 'team'i;
+  for (int $i=1; $i<= $nb_grp; $i++) {
+      $num_team = $i;
+      $login = 'team'$i;
     if(!empty($_POST['promo']) && !empty($_POST['nb_grp'])){
         $query = $conn->prepare('INSERT INTO compte (login, mdp, statut, promo, num_team) VALUES (:login, :mdp, :statut, :promo, :num_team)');
         $query->bindValue(':login', $login, PDO::PARAM_STR);
