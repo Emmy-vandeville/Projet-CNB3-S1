@@ -28,11 +28,10 @@ if (isset($_POST['ajout'])){
         $query->bindValue(':num_team', $num_team, PDO::PARAM_INT);
         $ajout = $query->execute();
         $conn = NULL;
-        if($ajout){
-          header('location: ../pages_enseignant/nouveau_grp.php');
-        } else {header('location: ../affichage_erreur.php?erreur=echec_ajout');}
-      } else {header('location: ../affichage_erreur.php?erreur=echec_ajout');}
+    } //else {header('location: ../affichage_erreur.php?erreur=echec_ajout');}
   }
-    
-}else {header('location: ../index.php');}
+  /*if($ajout){
+    header('location: ../pages_enseignant/nouveau_grp.php');
+  } else {header('location: ../affichage_erreur.php?erreur=echec_ajout');}*/
+} // else {header('location: ../index.php');}
 ?>
