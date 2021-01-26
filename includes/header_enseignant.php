@@ -12,7 +12,7 @@ require_once('fonction.php');
 
 $topmenu[] = array(
   'libelle' => 'Photos promo',
-  'url' => getRootPath().'../photos.php');
+  'url' => getRootPath().'photos.php');
 $topmenu[] = array(
   'libelle' => 'Nouveaux groupes',
   'url' => getRootPath().'pages_enseignant/nouveau_grp.php');
