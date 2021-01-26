@@ -29,9 +29,9 @@ require_once('config/configdb.php'); //configuration bdd */
     <fieldset class="field">
       <h3 class="titreformulaire">Créer de nouveaux groupes</h3>
       <label for="promo" class="label">Numéro de promotion :</label>
-      <input type="int" name="promo" placeholder="promo" class="input" required></input>
+      <input type="int" name="promo" placeholder="Promo" class="input" required></input>
       <label for="nb_grp" class="label">Nombre de groupe :</label>
-      <input type="int" name="nb_grp" placeholder="nb_grp" class="input" required></input>
+      <input type="int" name="nb_grp" placeholder="Nombre de binome" class="input" required></input>
       <button type="add" name="ajout">Créer</button>
     </fieldset>
 </form>
