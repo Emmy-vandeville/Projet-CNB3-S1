@@ -35,12 +35,12 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
   }*/
 
   // Création de $nb_grp compte pour les élèves
+  $query = $conn->prepare('INSERT INTO compte (`login`, `mdp`, `statut`, `promo`, `num_team`) VALUES (?, ?, ?, ?, ?)');
   for ($i=1; $i<= $nb_grp; $i++) {
       $num_team = $i;
       $login = 'team'.$i;
       $mdp = Genere_Password(10);
     if(!empty($_POST['promo']) && !empty($_POST['nb_grp'])){
-        $query = $conn->prepare('INSERT INTO compte (`login`, `mdp`, `statut`, `promo`, `num_team`) VALUES (?, ?, ?, ?, ?)');
         $ajout = $query->execute(array($login, $mdp, $statut, $promo, $num_team));
     } else {header('location: ../affichage_erreur.php?erreur=echec_ajout');}
   }
