@@ -12,13 +12,13 @@ require_once('fonction.php');
 
 $topmenu[] = array(
   'libelle' => 'Mes photos',
-  'url' => getRootPath().'mes_photos.php');
+  'url' => getRootPath().'pages_etudiant/mes_photos.php');
 $topmenu[] = array(
   'libelle' => 'Photos des autres groupes',
-  'url' => getRootPath().'../photos.php');
+  'url' => getRootPath().'photos.php');
 $topmenu[] = array(
   'libelle' => 'Archives',
-  'url' => getRootPath().'archives.php');
+  'url' => getRootPath().'pages_etudiant/archives.php');
 ?>
 
 
