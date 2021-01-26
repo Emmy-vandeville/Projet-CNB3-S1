@@ -38,7 +38,7 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
   $query = $conn->prepare('INSERT INTO compte (`login`, `mdp`, `statut`, `promo`, `num_team`) VALUES (?, ?, ?, ?, ?)');
   for ($i=1; $i<= $nb_grp; $i++) {
       $num_team = $i;
-      $login = 'team'.$i;
+      $login = 'team'.$i.$promo;
       $mdp = Genere_Password(10);
       // On crypte le mot de passe
       $passwordhash = password_hash($mdp, PASSWORD_DEFAULT);
