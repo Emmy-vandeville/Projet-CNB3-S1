@@ -35,10 +35,52 @@
     padding-left: .2rem!important;
   }
 }
+/* */
+
+
+
 /* FIN code de la barre de navigation */
-.selected {
-  border: 3px solid pink;
+
+/* Debut mise en page des images */
+#photo-list li.selected {
+  border: 3px solid #69B860;
 }
+
+#photo-list img {
+  display: block; /* Sinon il y a un petit gap sous l'image */
+}
+
+#photo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#photo-list li {
+  padding: 1%;
+  margin:1% 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 800px;
+  max-width:90%;
+  margin: 0 auto;
+}
+#total span{
+  color: red;
+  font-weight: bold;
+}
+.btn_supr{
+  display: block;
+  margin:auto
+}
+
+#total{
+  text-align: center;
+}
+/* Fin mise en page des images */
 /**/
 header {
 	text-align: center;
