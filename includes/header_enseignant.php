@@ -15,10 +15,10 @@ $topmenu[] = array(
   'url' => getRootPath().'../photos.php');
 $topmenu[] = array(
   'libelle' => 'Nouveaux groupes',
-  'url' => getRootPath().'nouveau_grp.php');
+  'url' => getRootPath().'../nouveau_grp.php');
 $topmenu[] = array(
   'libelle' => 'Archives',
-  'url' => getRootPath().'archives.php');
+  'url' => getRootPath().'../archives.php');
 ?>
 
 
