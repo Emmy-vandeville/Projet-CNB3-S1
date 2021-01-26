@@ -16,20 +16,15 @@ if (isset($_POST['ajout'])){
   }
 
   require_once('configdb.php');
+
   for ($i=1; $i<= $nb_grp; $i++) {
       $num_team = $i;
       $login = 'team'.$i;
       $mdp = generRandStr(15);
     if(!empty($_POST['promo']) && !empty($_POST['nb_grp'])){
       echo $login;
-        $query = $conn->prepare('INSERT INTO compte(login, mdp, statut, promo, num_team) VALUES (:login, :mdp, :statut, :promo, :num_team)');
-        $query->bindValue(':login', $login, PDO::PARAM_STR);
-        $query->bindValue(':mdp', $mdp, PDO::PARAM_STR);
-        $query->bindValue(':statut', $statut, PDO::PARAM_INT);
-        $query->bindValue(':promo', $promo, PDO::PARAM_INT);
-        $query->bindValue(':num_team', $num_team, PDO::PARAM_INT);
-        $ajout = $query->execute();
-        $conn = NULL;
+        $query = $conn->prepare('INSERT INTO compte (`login`, `mdp`, `statut`, `promo`, `num_team`) VALUES (?, ?, ?, ?, ?)');
+        $ajout = $query->execute(array($login, $mdp, $statut, $promo, $num_team));
     } //else {header('location: ../affichage_erreur.php?erreur=echec_ajout');}
   }
   /*if($ajout){
