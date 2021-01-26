@@ -26,7 +26,6 @@ $topmenu[] = array(
 <body>
 <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-
           <?php for ($i = 0; $i < count($topmenu); $i++) { ?>
             <li class="nav-item"><a class="nav-link" href="<?php echo $topmenu[$i]['url'] ?>"><?php echo $topmenu[$i]['libelle'] ?></a></li>
           <?php } ?>
