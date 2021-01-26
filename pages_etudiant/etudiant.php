@@ -7,13 +7,14 @@
   </style>
 </head>
 <body>
+  <h1> Bienvenue sur votre espace étudiant </h1>
   <ul id="photo-list">
-    <li class="element">
+    <p class="element">
       <img src="../img/chat2.jpg" id="1" height="150" width="150">
-    </li>
-    <li class="element">
+    </p>
+    <p class="element">
       <img src="../img/chat7.jpg" id="2" height="150" width="150">
-    </li>
+    </p>
   </ul>
 
   <form method="post" action="supprimer.php"> <!-- get c'est quand on passe par l'URL, or ce n'est pas ce qu'on veut donc on passe par post-->

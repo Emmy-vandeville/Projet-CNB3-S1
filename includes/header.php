@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Page étudiant</title>
 
     <?php
@@ -23,12 +23,13 @@ $topmenu[] = array(
 
 
 </head>
-<body>
-<div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-
-          <?php for ($i = 0; $i < count($topmenu); $i++) { ?>
-            <li class="nav-item"><a class="nav-link" href="<?php echo $topmenu[$i]['url'] ?>"><?php echo $topmenu[$i]['libelle'] ?></a></li>
-          <?php } ?>
-</body>
+<header>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <?php for ($i = 0; $i < count($topmenu); $i++) { ?>
+        <a class="nav-link" class="nav-item" href="<?php echo $topmenu[$i]['url'] ?>"><?php echo $topmenu[$i]['libelle'] ?></a>
+      <?php } ?>
+    </ul>
+  </div>
+</header>
 </html>
