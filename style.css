@@ -70,10 +70,11 @@ footer a {
 form {
     max-width: 40%;
     margin: 0 auto;
-    padding-top: 5%;
-
+    margin-top: 5%;
+    margin-left: 30%;
+    
 }
-fieldset {
+.field {
   border: 0.1rem solid grey;
  
   border-radius: 4%;
@@ -88,9 +89,9 @@ input{
 }
 
 .btn_nv_grp{
-    margin-left: 25%;
-    width:50%;
-    color: white;
+  margin-left: 25%;
+  width:50%;
+  color: white;
   border: 0;
   padding: 3% 0;
   cursor: pointer;
@@ -98,17 +99,20 @@ input{
   display: block;
   margin: 5% auto 5%;
   font-size: 150%;
+  background-color: green;
 }
 .titreformulaire{
-    margin-left: 25%;
+    text-align: center;
 }
 
 .row {
     margin: 5% 15%;
+
 }
 
   .field {
     display: block;
+    width: 100%;
   }
   
   .label {
@@ -120,5 +124,13 @@ input{
   .input {
     padding-top: 2%;
     padding-bottom: 2%;
+    margin-left: 25%;
+    margin-top: 3%;
+    width: 50%;
+  }
+  .label{
+    margin-left: 25%;
+    width: 50%;
+    padding-bottom: 10%;
   }
 /* FIN code formulaire */
