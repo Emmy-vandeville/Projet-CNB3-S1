@@ -6,20 +6,17 @@ if ($_SESSION['autorisation']=='oui') {
       require('includes/header_connexion.php');
       break;
     case 1:
-      require('includes/header_enseignant.php');
+      require('includes/header_admin.php');
       break;
     case 2:
-      require('includes/header.php');
-      break;
-    case 3:
-      require('includes/header.php');
+      require('includes/header_emp.php');
       break;
   }
 }
 else {
-  require('includes/header.php');
+  require('includes/header.php');;
 }
-require_once('config/configdb.php'); //configuration bdd */
+     */
 ?>
 
 <?php require_once('../includes/header_enseignant.php'); ?>
