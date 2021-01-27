@@ -32,6 +32,4 @@ $topmenu[] = array(
     </ul>
   </div>
 </header>
-<body>
-</body>
-</html>
+
