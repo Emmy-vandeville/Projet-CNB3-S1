@@ -21,7 +21,7 @@ $topmenu[] = array(
   'url' => getRootPath().'pages_enseignant/affichage_grp.php');
 $topmenu[] = array(
   'libelle' => 'Archives',
-  'url' => getRootPath().'pages_enseignant/archives.php');
+  'url' => getRootPath().'archives-tous.php');
 
 ?>
 
@@ -36,4 +36,3 @@ $topmenu[] = array(
     </ul>
   </div>
 </header>
-

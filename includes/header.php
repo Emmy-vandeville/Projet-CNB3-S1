@@ -18,7 +18,7 @@ $topmenu[] = array(
   'url' => getRootPath().'photos.php');
 $topmenu[] = array(
   'libelle' => 'Archives',
-  'url' => getRootPath().'pages_etudiant/archives.php');
+  'url' => getRootPath().'archives-tous.php');
 ?>
 
 
@@ -32,4 +32,3 @@ $topmenu[] = array(
     </ul>
   </div>
 </header>
-
