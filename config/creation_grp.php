@@ -14,7 +14,7 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
   
       for($j=0;$j<$size;$j++)
       {
-          $password .= ($j%2) ? strtoupper($characters[array_rand($characters)]) : $characters[array_rand($characters)];
+          $password = ($j%2) ? strtoupper($characters[array_rand($characters)]) : $characters[array_rand($characters)];
       }
 
       return $password;
