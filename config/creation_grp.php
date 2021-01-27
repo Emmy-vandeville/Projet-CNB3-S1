@@ -24,15 +24,12 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
   require_once('configdb.php');
 
   // Mise à jour de la promotion actuel suite à la création de nouveau groupe
-  /*if(!empty($_SESSION['id'])){
-    $pdo = $conn->prepare('UPDATE compte SET promo=:promo WHERE id_compte=id_compte');
+  if(!empty($_SESSION['id'])){
+    $pdo = $conn->prepare('UPDATE compte SET promo=:promo WHERE id_compte=:id_compte');
     $pdo->bindValue(':promo', $promo, PDO::PARAM_INT);
-    $pdo->bindParam(':id_compte', $_SESSION['id_compte'], PDO::PARAM_INT);
+    $pdo->bindValue(':id_compte', $_SESSION['id'], PDO::PARAM_INT);
     $update = $pdo->execute();
-    if ($update){
-      $conn = NULL;
-    }
-  }*/
+  }
 
   // Création de $nb_grp compte pour les élèves
   $query = $conn->prepare('INSERT INTO compte (`login`, `mdp`, `statut`, `promo`, `num_team`) VALUES (?, ?, ?, ?, ?)');
@@ -47,7 +44,7 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
         $ajout = $query->execute(array($login, $passwordhash, $statut, $promo, $num_team));
     } else {header('location: ../affichage_erreur.php?erreur=echec_ajout');}
   }
-// Envoie vers la page d'affichage de compte (là page demande groupe car affichage à tester)
-  header('location: ../pages_enseignant/nouveau_grp.php');
+// Envoie vers la page d'affichage de compte
+  header('location: ../pages_enseignant/affichage_grp.php');
 } //else {header('location: ../index.php');}
 ?>
