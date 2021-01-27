@@ -14,7 +14,7 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
   
       for($j=0;$j<$size;$j++)
       {
-          $password = ($j%2) ? strtoupper($characters[array_rand($characters)]) : $characters[array_rand($characters)];
+          $password .= ($j%2) ? strtoupper($characters[array_rand($characters)]) : $characters[array_rand($characters)];
       }
 
       return $password;
@@ -40,8 +40,9 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
       $num_team = $i;
       $login = 'team'.$i.$promo;
       $mdp = Genere_Password(10);
+      //echo $mdp;
       // On crypte le mot de passe
-      $passwordhash = password_hash($mdp, PASSWORD_DEFAULT);
+      $passwordhash = hash('sha256', $mdp);
     if(!empty($_POST['promo']) && !empty($_POST['nb_grp'])){
         $ajout = $query->execute(array($login, $passwordhash, $statut, $promo, $num_team));
     } else {header('location: ../affichage_erreur.php?erreur=echec_ajout');}
