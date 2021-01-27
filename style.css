@@ -91,13 +91,28 @@
   color: red;
   font-weight: bold;
 }
-.btn_supr{
-  display: block;
-  margin:auto
-}
 
 #total{
+  display: block;
   text-align: center;
+  margin: 0 auto;
+}
+
+.btn_supr{
+  border-radius: 1rem;
+  background-color: green;
+  color: white;
+  border: 0;
+  font-size: 150%;
+  margin: 0 auto;
+}
+
+.field-photo{
+  border: 0.1rem solid grey;
+  border-radius: 4%;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 /* Fin mise en page des images */
 /**/
@@ -207,3 +222,23 @@ input{
 
 
 /* Fin code page de connexion */
+
+
+/* debut page affichage des groupes*/
+
+
+
+.id{
+  
+  text-align: center;
+  width: 30%;
+  margin: 0 auto 2%;
+
+}
+.equipe{
+  margin-bottom: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* fin page affichage des groupes*/

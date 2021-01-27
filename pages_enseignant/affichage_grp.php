@@ -31,13 +31,16 @@ $compte = $conn -> query('SELECT * FROM compte WHERE promo='.$compte_enseignant[
 ?>
 
 <main>
-    <h2 class="titre">Indentifiants élèves promo <?= $compte_enseignant['promo']?> :​</h2>
+    <h2 class="titre">Identifiants élèves promo <?= $compte_enseignant['promo']?> :​</h2>
+    <div class = "equipe">
         <?php while($a = $compte->fetch()){?>
-        <div class="id">
-        <h3>Equipe <?= $a['num_team'] ?></h3>
+          <div class="id">          
+          <h3>Equipe <?= $a['num_team'] ?></h3>
           <p>Login : <?= $a['login'] ?></p>
           <p>Mot de passe : <?= ssl_decode($a['mdp_aes'], $key) ?></p>
+       
         </div>
       <?php } ?>
+        </div>
 </main>
 <?php require('../includes/footer.php'); ?>
