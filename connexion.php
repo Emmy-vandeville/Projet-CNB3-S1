@@ -4,7 +4,7 @@ if ($_SESSION['autorisation']=='oui') {
   header('location:index.php');
   exit;
 }*/
-require('includes/header.php');
+require('includes/header_connexion.php');
 require('config/configdb.php');
 session_start();
 
@@ -37,13 +37,22 @@ if (isset($_POST['username'])){
 ?>
 <main>
 <form class="box" action="" method="post" name="login">
-<h1 class="box-title">Connexion</h1>
-<input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">
-<input type="password" class="box-input" name="password" placeholder="Mot de passe">
-<input type="submit" value="Connexion " name="submit" class="box-button">
+	<fieldset class="field">
+	<h1 class="box-title">Connexion</h1>
+	<div class = "row">
+    <label for="username" class="label">Nom d'utilisateur :</label>
+	<input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">
+	</div>
+    <div class = "row">
+    <label for="password" class="label">Mot de passe :</label>
+	<input type="password" class="box-input" name="password" placeholder="Mot de passe">
+	</div>
+	<input type="submit" value="Connexion " name="submit" class="box-button">
+	
 <?php if (! empty($message)) { ?>
     <p class="errorMessage"><?php echo $message; ?></p>
 <?php } ?>
+	</fieldset>
 </form>
 </main>
 

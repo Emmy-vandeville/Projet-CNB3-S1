@@ -130,31 +130,44 @@ footer a {
 }
 /* FIN */
 
-/* code formulaire */
+/* code formulaire commun */
 form {
-    max-width: 40%;
-    margin: 0 auto;
-    margin-top: 5%;
-    margin-left: 30%;
-    
+  max-width: 40%;
+  margin-top: 5%;
+  margin-left: 30%;    
 }
 .field {
   border: 0.1rem solid grey;
- 
   border-radius: 4%;
+  display: block;
+  width: 100%;
 }
 
 input{
   background-color: #FFFFFF;
   border: 0.08rem solid black;
+  margin: 5% auto;
   text-align: center;
   color: black;
-
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
+
+.row {
+  width:70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fin code formulaire commun */
+
+/* code formulaire nouveau groupe*/
 
 .btn_nv_grp{
   margin-left: 25%;
-  width:50%;
+  width:100%;
   color: white;
   border: 0;
   padding: 3% 0;
@@ -169,32 +182,28 @@ input{
     text-align: center;
 }
 
-.row {
-    margin: 5% 15%;
+  
+/* FIN code formulaire */
 
+/* Debut code page de connexion */
+.box-button{
+  margin-left: 25%;
+  width:90%;
+  color: white;
+  border: 0;
+  padding: 3% 0;
+  cursor: pointer;
+  border-radius: 1rem;
+  display: block;
+  margin: 5% auto 5%;
+  font-size: 150%;
+  background-color: green;
+  text-align: center;
 }
 
-  .field {
-    display: block;
-    width: 100%;
-  }
-  
-  .label {
-    width: 70%;
-    /*font-family: 'Josefin Sans', sans-serif;*/
-    margin: 5% auto 2%;
-  }
-  
-  .input {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-left: 25%;
-    margin-top: 3%;
-    width: 50%;
-  }
-  .label{
-    margin-left: 25%;
-    width: 50%;
-    padding-bottom: 10%;
-  }
-/* FIN code formulaire */
+.box-title{
+  text-align: center;
+}
+
+
+/* Fin code page de connexion */

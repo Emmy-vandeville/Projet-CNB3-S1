@@ -33,15 +33,18 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
 
        $sources = "../img/$fichier";
        $promo = 0;
+       $team = 0;
        $id_categorie = 0;
        $id_lieu = 0;
 
-       $query = $conn->prepare('INSERT INTO photo (source, promo, id_categorie, id_lieu) VALUES (:source, :promo, :id_categorie, :id_lieu)');
+       $query = $conn->prepare('INSERT INTO photo (source, promo, team, id_categorie, id_lieu) VALUES (:source, :promo, :team, :id_categorie, :id_lieu)');
        $query->bindValue(':source', $sources, PDO::PARAM_STR);
        $query->bindValue(':promo', $promo, PDO::PARAM_STR);
+       $query->bindValue(':team', $team, PDO::PARAM_STR);
        $query->bindValue(':id_categorie', $id_categorie, PDO::PARAM_STR);
        $query->bindValue(':id_lieu', $id_lieu, PDO::PARAM_STR);
        $query->execute();
+
        header('Location: mes_photos.php');
 }
 else
