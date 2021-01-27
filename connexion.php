@@ -21,6 +21,9 @@ if (isset($_POST['username'])){
 	
 	if (mysqli_num_rows($result) == 1) {
 		$user = mysqli_fetch_assoc($result);
+		$_SESSION['autorisation'] = 'oui';
+		$_SESSION['acces'] = $user['statut'];
+		$_SESSION['id'] = $user['id_compte'];
 		// vérifier si l'utilisateur est un administrateur ou un utilisateur
 		if ($user['statut'] == 0) {
 			header('location: pages_enseignant/enseignant.php');		  
