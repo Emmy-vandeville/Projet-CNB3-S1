@@ -17,14 +17,13 @@ else {
 <body>
 
 <main class = "container">
-<ul id="photo-list">
   <ul id="photo-list">
     <?php require_once('affichage_image.php'); ?>
   </ul>
+</main>
 
 
 
-<p id="total">Vous allez supprimer <span>0</span> image(s)</p>
 
 <form method="POST" action="ajout_photo.php" enctype="multipart/form-data">
   <fieldset class="field-photo">
@@ -37,6 +36,7 @@ else {
    </fieldset>
  </form>
 
+ <p id="total">Vous allez supprimer <span>0</span> image(s)</p>
 
   <form method="post" action="supprimer.php"> <!-- get c'est quand on passe par l'URL, or ce n'est pas ce qu'on veut donc on passe par post-->
       <button type="submit" class="btn_supr">Supprimer</button>
