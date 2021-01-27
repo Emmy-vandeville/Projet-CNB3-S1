@@ -3,10 +3,6 @@
   background-color: #6A847A;
 }
 
-.navbar-collapse {
-    width: auto;
-    display: flex!important;
-}
 
 .navbar-nav {
     flex-direction: row;
@@ -19,7 +15,7 @@
 }
 
 .nav-link:hover, .nav-link:active  {
-  background-color: green;
+  color:#1C4717!important;
 }
 
 @media (max-width: 670px) {
@@ -35,8 +31,31 @@
     padding-left: .2rem!important;
   }
 }
-/* */
 
+#navbarNav {
+
+  text-align: center;
+  padding: 0;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.nav-link {
+  color: inherit;
+  font-size: 1.2em;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+/* */
 
 
 /* FIN code de la barre de navigation */
@@ -86,6 +105,7 @@ header {
 	text-align: center;
   text-decoration: none;
   background-color: #6A847A;
+  
 }
 header a {
     text-decoration: none;
