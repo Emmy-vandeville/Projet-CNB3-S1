@@ -4,15 +4,15 @@ session_start();
 if ($_SESSION['autorisation']=='oui') {
   switch($_SESSION['acces']){
     case 0:
-      require('includes/header_enseignant.php');
+      require('../includes/header_enseignant.php');
       break;
     case 1:
-      require('includes/header.php');
+      require('../includes/header.php');
       break;
   }
 }
 else {
-  require('includes/header_connexion.php');;
+  require('../includes/header_connexion.php');;
 }?>
 <body>
 
