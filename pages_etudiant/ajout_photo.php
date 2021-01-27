@@ -15,7 +15,7 @@ $compte = $query1->fetch();
 $query1->closeCursor();
 
 //On va chercher l'image dans le dossier
-$dossier = '../img';
+$dossier = '../img/';
 $fichier = basename($_FILES['avatar']['name']);
 $taille_maxi = 500000;
 $taille = filesize($_FILES['avatar']['tmp_name']);
@@ -39,6 +39,8 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
           'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
      $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
 
+     if(move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+     {
        $sources = "../img/$fichier";
        $promo = $compte['promo'];
        $id_categorie = 0;
@@ -54,6 +56,11 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
        $query->bindValue(':team', $team, PDO::PARAM_STR);
        $query->execute();
        header('Location: mes_photos.php');
+     }
+     else //Sinon (la fonction renvoie FALSE).
+     {
+          echo 'Echec de l\'upload !';
+     }
 }
 else
 {
