@@ -1,25 +1,19 @@
-<?php /*      //   A REVOIR METHODE CHOIX HEADER
+<?php
 session_start();
+// On gère le header en fonction du statut
 if ($_SESSION['autorisation']=='oui') {
   switch($_SESSION['acces']){
     case 0:
-      require('includes/header_connexion.php');
+      require('includes/header_enseignant.php');
       break;
     case 1:
-      require('includes/header_admin.php');
-      break;
-    case 2:
-      require('includes/header_emp.php');
+      require('includes/header.php');
       break;
   }
 }
 else {
-  require('includes/header.php');;
-}
-     */
-?>
-
-<?php require_once('../includes/header_enseignant.php'); ?>
+  require('includes/header_connexion.php');;
+}?>
 
 <main>
 <form method="POST" action="../config/creation_grp.php" class="form">
