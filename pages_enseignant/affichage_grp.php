@@ -5,6 +5,7 @@ require_once('../includes/header_enseignant.php');
 
 // Appel connexion BDD
 require_once('../config/configdb.php');
+require_once('../config/aes256.php');
 
 // On récuppère les informations du compte utilisateur (compte enseignant)
 $query = $conn->prepare('SELECT * FROM compte WHERE id_compte=:id_compte');
@@ -14,26 +15,17 @@ $compte_enseignant = $query->fetch();
 $query->closeCursor();
 
 // On réccupère les compte élèves de la promo en cours (promo de l'enseignant)
-$statut = 1;
-$pdo = $conn->prepare('SELECT * FROM compte WHERE promo=:promo AND statut=:staut');
-$pdo->bindValue(':promo', $compte_enseignant['promo'], PDO::PARAM_INT);
-$pdo->bindValue(':statut', $statut, PDO::PARAM_INT);
-$pdo->execute();
-$compte = $pdo->fetchAll()
-$pdo->closeCursor();
-$conn = NULL;
-
+$compte = $conn -> query('SELECT * FROM compte WHERE promo='.$compte_enseignant['promo'].' AND statut=1');
 ?>
 
 <main>
     <h2 class="titre">Indentifiants élèves promo <?= $compte_enseignant['promo']?> :​</h2>
-        <?php foreach($compte as $key => $compte):?>
+        <?php while($a = $compte->fetch()){?>
         <div class="id">
-          <?php $key = $compte['id_compte']?>
-          <p>Login : <?= $compte['login'] ?></p>
-          <p>Mot de passe : <?= $compte['mdp'] ?></p>
+        <h3>Equipe <?= $a['num_team'] ?></h3>
+          <p>Login : <?= $a['login'] ?></p>
+          <p>Mot de passe : <?= ssl_decode($a['mdp_aes'], $key) ?></p>
         </div>
-      <?php endforeach; ?>
+      <?php } ?>
 </main>
-
 <?php require('../includes/footer.php'); ?>

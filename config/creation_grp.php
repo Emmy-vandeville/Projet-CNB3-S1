@@ -1,4 +1,8 @@
 <?php
+require_once('aes256.php');
+// Appel connexion BDD
+require_once('configdb.php');
+
 session_start();
 if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_grp.php
   // Récupération des élément passés en post et définition variables
@@ -20,8 +24,6 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
       return $password;
   }
 
-  // Appel connexion BDD
-  require_once('configdb.php');
 
   // Mise à jour de la promotion actuel suite à la création de nouveau groupe
   if(!empty($_SESSION['id'])){
@@ -31,8 +33,9 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
     $update = $pdo->execute();
   }
 
+
   // Création de $nb_grp compte pour les élèves
-  $query = $conn->prepare('INSERT INTO compte (`login`, `mdp`, `statut`, `promo`, `num_team`) VALUES (?, ?, ?, ?, ?)');
+  $query = $conn->prepare('INSERT INTO compte (`login`, `mdp`, `mdp_aes`, `statut`, `promo`, `num_team`) VALUES (?, ?, ?, ?, ?, ?)');
   for ($i=1; $i<= $nb_grp; $i++) {
       $num_team = $i;
       $login = 'team'.$i.$promo;
@@ -40,8 +43,9 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
       //echo $mdp;
       // On crypte le mot de passe
       $passwordhash = hash('sha256', $mdp);
+      $passwordAes = ssl_encode($mdp, $key);
     if(!empty($_POST['promo']) && !empty($_POST['nb_grp'])){
-        $ajout = $query->execute(array($login, $passwordhash, $statut, $promo, $num_team));
+        $ajout = $query->execute(array($login, $passwordhash, $passwordAes, $statut, $promo, $num_team));
     } else {header('location: ../affichage_erreur.php?erreur=echec_ajout');}
   }
   $conn = NULL;
