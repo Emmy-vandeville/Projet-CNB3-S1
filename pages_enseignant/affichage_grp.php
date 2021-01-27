@@ -19,17 +19,21 @@ $pdo = $conn->prepare('SELECT * FROM compte WHERE promo=:promo AND statut=:staut
 $pdo->bindValue(':promo', $compte_enseignant['promo'], PDO::PARAM_INT);
 $pdo->bindValue(':statut', $statut, PDO::PARAM_INT);
 $pdo->execute();
+$compte = $pdo->fetchAll()
+$pdo->closeCursor();
+$conn = NULL;
 
 ?>
 
 <main>
     <h2 class="titre">Indentifiants élèves promo <?= $compte_enseignant['promo']?> :​</h2>
+        <?php foreach($compte as $key => $compte):?>
         <div class="id">
-        <?php while($compte = $pdo->fetchAll()){?>
-            <p>Login : <?= $compte['login'] ?></p>
-            <p>Mot de passe : <?= $compte['mdp'] ?></p>
-        <?php } ?>
+          <?php $key = $compte['id_compte']?>
+          <p>Login : <?= $compte['login'] ?></p>
+          <p>Mot de passe : <?= $compte['mdp'] ?></p>
         </div>
+      <?php endforeach; ?>
 </main>
 
 <?php require('../includes/footer.php'); ?>

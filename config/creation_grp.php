@@ -44,6 +44,7 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
         $ajout = $query->execute(array($login, $passwordhash, $statut, $promo, $num_team));
     } else {header('location: ../affichage_erreur.php?erreur=echec_ajout');}
   }
+  $conn = NULL;
 // Envoie vers la page d'affichage de compte
   header('location: ../pages_enseignant/affichage_grp.php');
 } //else {header('location: ../index.php');}
