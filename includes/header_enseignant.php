@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Page étudiant</title>
+    <title>Page enseignant</title>
 
     <?php
 
@@ -17,8 +17,12 @@ $topmenu[] = array(
   'libelle' => 'Nouveaux groupes',
   'url' => getRootPath().'pages_enseignant/nouveau_grp.php');
 $topmenu[] = array(
+  'libelle' => 'Affichage des groupes',
+  'url' => getRootPath().'pages_enseignant/affichage_grp.php');
+$topmenu[] = array(
   'libelle' => 'Archives',
   'url' => getRootPath().'pages_enseignant/archives.php');
+
 ?>
 
 
