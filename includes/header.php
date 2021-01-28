@@ -20,10 +20,13 @@ $topmenu[] = array(
   'url' => getRootPath().'pages_etudiant/mes_photos.php');
 $topmenu[] = array(
   'libelle' => 'Photos des autres groupes',
-  'url' => getRootPath().'photos.php');
+  'url' => getRootPath().'pages_communes/photos.php');
 $topmenu[] = array(
   'libelle' => 'Archives',
-  'url' => getRootPath().'archives-tous.php');
+  'url' => getRootPath().'pages_communes/archives-tous.php');
+ $topmenu[] = array(
+  'libelle' => 'Téléchargement photos cette année',
+  'url' => getRootPath().'pages_etudiant/telechargement_actuel.php');
 $topmenu[] = array(
   'libelle' => 'Déconnexion',
   'url' => getRootPath().'config/deconnexion.php');
@@ -31,6 +34,14 @@ $topmenu[] = array(
 
 
 </head>
+
+<img
+    class = "logo"
+    src="../images_logo/logojunia.png"
+    alt="logo ISA"
+    height="100px"
+    width="250px"
+/>
 <header>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">

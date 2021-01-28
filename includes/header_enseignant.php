@@ -17,7 +17,7 @@ $topmenu[] = array(
   'url' => getRootPath().'pages_enseignant/enseignant.php');
 $topmenu[] = array(
   'libelle' => 'Photos promo',
-  'url' => getRootPath().'photos.php');
+  'url' => getRootPath().'pages_communes/photos.php');
 $topmenu[] = array(
   'libelle' => 'Nouveaux groupes',
   'url' => getRootPath().'pages_enseignant/nouveau_grp.php');
@@ -26,15 +26,23 @@ $topmenu[] = array(
   'url' => getRootPath().'pages_enseignant/affichage_grp.php');
 $topmenu[] = array(
   'libelle' => 'Archives',
-  'url' => getRootPath().'archives-tous.php');
+  'url' => getRootPath().'pages_communes/archives-tous.php');
 $topmenu[] = array(
   'libelle' => 'Déconnexion',
   'url' => getRootPath().'config/deconnexion.php');
-  ?>
-
+?>
 
 
 </head>
+
+<img
+    class = "logo"
+    src="../images_logo/logojunia.png"
+    alt="logo ISA"
+    height="100px"
+    width="250px"
+/>
+
 <header>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">

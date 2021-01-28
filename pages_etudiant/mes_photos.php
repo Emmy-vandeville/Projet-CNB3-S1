@@ -29,10 +29,11 @@ else {
      <input type="hidden" name="MAX_FILE_SIZE" value="1000000000">
      <label>Fichier :</label>
      <input type="file" name="avatar">
-     <button type="submit" name="envoyer" value="Envoyer le fichier">Envoyer le fichier</button>
+     <button type="submit" name="envoyer" value="Envoyer le fichier" class="btn-env">Envoyer le fichier</button>
    </fieldset>
  </form>
 
+<p id="total"> Vous allez supprimer <span>0</span> photo(s) </p>
 
   <form method="post" action="supprimer.php"> <!-- get c'est quand on passe par l'URL, or ce n'est pas ce qu'on veut donc on passe par post-->
       <button type="submit" class="btn_supr">Supprimer</button>
@@ -42,4 +43,6 @@ else {
 
 <script src="main.js"></script>
 
+
 <?php require('../includes/footer.php'); ?>
+

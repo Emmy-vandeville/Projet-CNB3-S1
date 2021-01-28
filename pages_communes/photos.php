@@ -1,22 +1,22 @@
-<?php/*
+<?php
 session_start();
 // On gère le header en fonction du statut
 if ($_SESSION['autorisation']=='oui') {
   switch($_SESSION['acces']){
     case 0:
-      require('includes/header_enseignant.php');
+      require('../includes/header_enseignant.php');
       break;
     case 1:
-      require('includes/header.php');
+      require('../includes/header.php');
       break;
   }
 }
 else {
-  require('includes/header_connexion.php');;
-}*/?>
+  require('../includes/header_connexion.php');;
+}?>
 
 <?php
-  require_once('config/configdb.php');
+  require_once('../config/configdb.php');
   $categories=['Larves','Vers annélides','Mollusques','Arachnides','Crustacés','Myriapodes','Chenilles','Collemboles','Orthoptères','Diptères','Lépidoptères','Nevroptères','Hymenoptères','Homoptères','Hémiptères','Coléoptères'];
   $stat = 0;
   /*$statut = $conn->query('SELECT * FROM compte WHERE statut =:zero');
@@ -29,7 +29,7 @@ else {
 <main>
 
   <section id="accordeon">
-    <?php for($i = 55; $i<=$max; $i++){?>
+    <?php for($i = $max; $i>=54; $i--){?>
       <article>
         <h2><a class="toggleDetail" href="#">Promo <?= $i ?></a></h2>
         <div class="panel">
@@ -47,6 +47,6 @@ else {
       </article>
     <?php } ?>
   </section>
-
+  <script src="../includes/jquery-3.5.1.min.js"></script>
+  <script src='../includes/js_photo_promo.js'></script>
 </main>
-<?php require('../includes/footer.php'); ?>

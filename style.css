@@ -62,7 +62,7 @@
 
 /* Debut mise en page des images */
 #photo-list li.selected {
-  border: 3px solid #69B860;
+  border: 3px solid #B64E44;
 }
 
 #photo-list img {
@@ -100,11 +100,24 @@
 
 .btn_supr{
   border-radius: 1rem;
-  background-color: green;
+  background-color: #B0BFA0;
   color: white;
   border: 0;
   font-size: 150%;
-  margin: 0 auto;
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.btn-env{
+  border-radius: 1rem;
+  background-color: #B0BFA0;
+  color: white;
+  border: 0;
+  font-size: 150%;
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
 }
 
 .field-photo{
@@ -113,7 +126,10 @@
   display: block;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 5%;
 }
+
+
 /* Fin mise en page des images */
 /**/
 header {
@@ -142,6 +158,12 @@ footer {
 footer a {
   text-decoration: none;
 	color:  #6A847A;
+}
+
+.logo{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* FIN */
 
@@ -191,7 +213,7 @@ input{
   display: block;
   margin: 5% auto 5%;
   font-size: 150%;
-  background-color: green;
+  background-color: #B0BFA0;
 }
 .titreformulaire{
     text-align: center;
@@ -212,7 +234,7 @@ input{
   display: block;
   margin: 5% auto 5%;
   font-size: 150%;
-  background-color: green;
+  background-color: #B0BFA0;
   text-align: center;
 }
 
@@ -229,10 +251,11 @@ input{
 
 
 .id{
-
   text-align: center;
-  width: 30%;
+  width: 35%;
   margin: 0 auto 2%;
+  border-radius: 5%;
+  background-color: #B0BFA0;
 
 }
 .equipe{
