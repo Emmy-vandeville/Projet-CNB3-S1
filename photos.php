@@ -1,4 +1,4 @@
-<?php/*
+<?php
 session_start();
 // On gère le header en fonction du statut
 if ($_SESSION['autorisation']=='oui') {
@@ -13,7 +13,7 @@ if ($_SESSION['autorisation']=='oui') {
 }
 else {
   require('includes/header_connexion.php');;
-}*/?>
+}?>
 
 <?php
   require_once('config/configdb.php');
