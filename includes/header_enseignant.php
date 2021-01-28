@@ -11,6 +11,9 @@
 require_once('fonction.php');
 
 $topmenu[] = array(
+  'libelle' => 'Accueil',
+  'url' => getRootPath().'pages_enseignant/enseignant.php');
+$topmenu[] = array(
   'libelle' => 'Photos promo',
   'url' => getRootPath().'photos.php');
 $topmenu[] = array(

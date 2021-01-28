@@ -29,7 +29,7 @@ else {
 <main>
 
   <section id="accordeon">
-    <?php for($i = $max; $i>=54; $i--){?>
+    <?php for($i = 55; $i<=$max; $i++){?>
       <article>
         <h2><a class="toggleDetail" href="#">Promo <?= $i ?></a></h2>
         <div class="panel">
@@ -39,15 +39,13 @@ else {
           $photos->execute();
           $data = $photos->fetchAll();
           foreach($data as $key):
-          $src_conc = substr($key['source'], 3);
           ?>
-          <img src=<?=$src_conc?> alt="" style="width:10%">
+          <img src=<?=$key['source']?> alt="" style="width:10%">
           <p>Catégorie : <?= $categories[$key['id_categorie']-1]?></p>
           <?php endforeach; ?>
         </div>
       </article>
     <?php } ?>
   </section>
-  <script src="includes/jquery-3.5.1.min.js"></script>
-  <script src='includes/js_photo_promo.js'></script>
+
 </main>
