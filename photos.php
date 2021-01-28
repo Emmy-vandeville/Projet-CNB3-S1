@@ -29,7 +29,7 @@ else {
 <main>
 
   <section id="accordeon">
-    <?php for($i = 55; $i<=$max; $i++){?>
+    <?php for($i = $max; $i>=54; $i--){?>
       <article>
         <h2><a class="toggleDetail" href="#">Promo <?= $i ?></a></h2>
         <div class="panel">
