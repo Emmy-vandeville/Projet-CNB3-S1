@@ -107,6 +107,15 @@
   margin: 0 auto;
 }
 
+.btn-env{
+  border-radius: 1rem;
+  background-color: green;
+  color: white;
+  border: 0;
+  font-size: 150%;
+  margin: 0 auto;
+}
+
 .field-photo{
   border: 0.1rem solid grey;
   border-radius: 4%;
@@ -130,22 +139,6 @@ header, footer{
 	box-sizing: border-box;
 }
 footer {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Page_Etudiant
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-    text-decoration: none;
-    position: relative;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> Page_Etudiant
 	text-align: center;
   padding-top: 10px;
 	padding-bottom: 10px;
@@ -153,12 +146,6 @@ footer {
 	padding-right: 40px;
 	text-decoration: none;
 	position: relative;
-<<<<<<< HEAD
->>>>>>> Page_Etudiant
-=======
->>>>>>> Page_Etudiant
-=======
->>>>>>> Page_Etudiant
   bottom: 0;
 }
 footer a {
@@ -257,19 +244,8 @@ input{
 
 
 .id{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> Page_Etudiant
-=======
-
->>>>>>> Page_Etudiant
-=======
->>>>>>> Page_Etudiant
   text-align: center;
-  width: 30%;
+  width: 35%;
   margin: 0 auto 2%;
   border-radius: 5%;
   background-color: #B0BFA0;
