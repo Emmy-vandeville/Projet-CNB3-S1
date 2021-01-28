@@ -27,8 +27,11 @@ $topmenu[] = array(
 $topmenu[] = array(
   'libelle' => 'Archives',
   'url' => getRootPath().'archives-tous.php');
+$topmenu[] = array(
+  'libelle' => 'Déconnexion',
+  'url' => getRootPath().'config/deconnexion.php');
+  ?>
 
-?>
 
 
 </head>
