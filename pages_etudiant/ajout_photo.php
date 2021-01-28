@@ -98,8 +98,9 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
        $id_lieu = 0;
        $team = $compte['num_team'];
        $disposition = 'attachment';
+       $nom_latin = $_POST['nom_latin'];
 
-       $query = $conn->prepare('INSERT INTO photo (source, promo, id_categorie, id_lieu, team, disposition) VALUES (:source, :promo, :id_categorie, :id_lieu, :team, :disposition)');
+       $query = $conn->prepare('INSERT INTO photo (source, promo, id_categorie, id_lieu, team, disposition, nom_latin) VALUES (:source, :promo, :id_categorie, :id_lieu, :team, :disposition, :nom_latin)');
        $query->bindValue(':source', $sources, PDO::PARAM_STR);
        $query->bindValue(':promo', $promo, PDO::PARAM_STR);
        $query->bindValue(':team', $team, PDO::PARAM_STR);
@@ -107,6 +108,7 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
        $query->bindValue(':id_lieu', $id_lieu, PDO::PARAM_STR);
        $query->bindValue(':team', $team, PDO::PARAM_STR);
        $query->bindValue(':disposition', $disposition, PDO::PARAM_STR);
+       $query->bindValue(':nom_latin', $nom_latin, PDO::PARAM_STR);
        $query->execute();
        header('Location: mes_photos.php');
      }

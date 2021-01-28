@@ -27,11 +27,11 @@ else {
     <h3 class="titreformulaire">Ajouter une photo</h3>
      <!-- On limite le fichier à 10Mo -->
      <input type="hidden" name="MAX_FILE_SIZE" value="1000000000">
+
      <label>Fichier :</label>
      <input type="file" name="avatar">
 
      <label for="species-select">Choisissez une espèce:</label>
-
      <select name="animaux" >
         <option value="">--Please choose an option--</option>
         <option value="1" >Larves</option>
@@ -50,9 +50,9 @@ else {
         <option value="14">Homoptères</option>
         <option value="15">Hémiptères</option>
         <option value="16">Coléoptères</option>
-
       </select>
 
+      <input type="text" name="nom_latin" placeholder="Nom scientifique">
 
      <button type="submit" name="envoyer" value="Envoyer le fichier" class="btn-env">Envoyer le fichier</button>
    </fieldset>
