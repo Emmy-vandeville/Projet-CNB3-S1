@@ -27,11 +27,9 @@ else {
     <h3 class="titreformulaire">Ajouter une photo</h3>
      <!-- On limite le fichier à 10Mo -->
      <input type="hidden" name="MAX_FILE_SIZE" value="1000000000">
-      <div class = "label">
-     <label class="label-file">Choisir un fichier :</label>
-     <input type="file" name="avatar" class="input-file" id="my-file">
-</div>
-     <button type="submit" class="btn-env" name="envoyer" value="Envoyer le fichier">Envoyer le fichier</button>
+     <label>Fichier :</label>
+     <input type="file" name="avatar">
+     <button type="submit" name="envoyer" value="Envoyer le fichier">Envoyer le fichier</button>
    </fieldset>
  </form>
 
@@ -45,6 +43,10 @@ else {
 <script src="main.js"></script>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<?php require('../includes/footer.php'); ?>
+>>>>>>> Page_Etudiant
 =======
 <?php require('../includes/footer.php'); ?>
 >>>>>>> Page_Etudiant

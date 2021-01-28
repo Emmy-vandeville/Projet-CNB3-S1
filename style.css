@@ -95,6 +95,7 @@
 #total{
   display: block;
   text-align: center;
+  margin: 0 auto;
 }
 
 .btn_supr{
@@ -103,17 +104,7 @@
   color: white;
   border: 0;
   font-size: 150%;
-  display: block;
-  margin : auto;
-}
-.btn-env{
-  border-radius: 1rem;
-  background-color: green;
-  color: white;
-  border: 0;
-  font-size: 150%;
-  display: block;
-  margin : auto;
+  margin: 0 auto;
 }
 
 .field-photo{
@@ -121,20 +112,12 @@
   border-radius: 4%;
   display: block;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
 }
-
-.label{
-  width:100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Fin mise en page des images */
 /**/
 header {
-    text-align: center;
+	text-align: center;
   text-decoration: none;
   background-color: #6A847A;
 
@@ -143,10 +126,11 @@ header a {
     text-decoration: none;
 }
 header, footer{
-    padding: 3px;
-    box-sizing: border-box;
+	padding: 3px;
+	box-sizing: border-box;
 }
 footer {
+<<<<<<< HEAD
 <<<<<<< HEAD
     text-align: center;
     padding-top: 10px;
@@ -156,6 +140,8 @@ footer {
     text-decoration: none;
     position: relative;
 =======
+=======
+>>>>>>> Page_Etudiant
 	text-align: center;
   padding-top: 10px;
 	padding-bottom: 10px;
@@ -163,12 +149,15 @@ footer {
 	padding-right: 40px;
 	text-decoration: none;
 	position: relative;
+<<<<<<< HEAD
+>>>>>>> Page_Etudiant
+=======
 >>>>>>> Page_Etudiant
   bottom: 0;
 }
 footer a {
   text-decoration: none;
-    color:  #6A847A;
+	color:  #6A847A;
 }
 
 .logo{
@@ -253,22 +242,27 @@ input{
   text-align: center;
 }
 
+
 /* Fin code page de connexion */
 
 
 /* debut page affichage des groupes*/
 
+
+
 .id{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> Page_Etudiant
 =======
 
 >>>>>>> Page_Etudiant
   text-align: center;
   width: 30%;
   margin: 0 auto 2%;
-  background-color: #B0BFA0;
-  border-radius: 4%;
-  display: block;
+
 }
 .equipe{
   margin-bottom: 5%;

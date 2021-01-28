@@ -14,7 +14,7 @@ $query1->execute();
 $compte = $query1->fetch();
 $query1->closeCursor();
 
-//On defini le dossier d'enregistrement
+//On va chercher l'image dans le dossier
 $dossier = '../img/';
 $fichier = basename($_FILES['avatar']['name']);
 $taille_maxi = 1000000000;
@@ -46,16 +46,14 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
        $id_categorie = 0;
        $id_lieu = 0;
        $team = $compte['num_team'];
-       $disposition = 'attachment';
 
-       $query = $conn->prepare('INSERT INTO photo (source, promo, id_categorie, id_lieu, team, disposition) VALUES (:source, :promo, :id_categorie, :id_lieu, :team, :disposition)');
+       $query = $conn->prepare('INSERT INTO photo (source, promo, id_categorie, id_lieu, team) VALUES (:source, :promo, :id_categorie, :id_lieu, :team)');
        $query->bindValue(':source', $sources, PDO::PARAM_STR);
        $query->bindValue(':promo', $promo, PDO::PARAM_STR);
        $query->bindValue(':team', $team, PDO::PARAM_STR);
        $query->bindValue(':id_categorie', $id_categorie, PDO::PARAM_STR);
        $query->bindValue(':id_lieu', $id_lieu, PDO::PARAM_STR);
        $query->bindValue(':team', $team, PDO::PARAM_STR);
-       $query->bindValue(':disposition', $disposition, PDO::PARAM_STR);
        $query->execute();
        header('Location: mes_photos.php');
      }
