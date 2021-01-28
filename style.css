@@ -285,8 +285,9 @@ input{
 
 /* Carousel */
 .contain {
-  width: 60%;
+  width: 55%;
   margin: 0 auto;
+
 }
 
 
@@ -403,3 +404,12 @@ table {
   }
 
   /* Fin tableau DL archives*/
+
+  /* titre page d'accueil*/
+h2{
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Courgette', cursive;
+}
+
+  /* Fin page d'accueil*/

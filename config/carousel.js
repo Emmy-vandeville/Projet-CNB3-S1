@@ -15,11 +15,11 @@ const slides =
 [
   {
     image: '../carousel/anelide.jpg',
-    legend: 'Anélide'
+    
   },
   {
     image: '../carousel/ver.jpg',
-    legend: 'Ver'
+   
   },
 ];
 let maxSlides = slides.length;
@@ -107,12 +107,12 @@ function refresh()
 {
   // Affichage du carrousel
   let sliderimage = document.querySelector("#carousel img");
-  let sliderLegend = document.querySelector("#carousel h2");
+
   //modifier source image
   sliderimage.src = slides[carousel.index].image;
-  sliderimage.alt = slides[carousel.index].legend;
+
   // modifier texte du carousel
-  sliderLegend.textContent = slides[carousel.index].legend;
+
   
 }
 
