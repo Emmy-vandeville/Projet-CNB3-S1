@@ -39,8 +39,9 @@ else {
           $photos->execute();
           $data = $photos->fetchAll();
           foreach($data as $key):
+          $src_conc = substr($key['source'], 3);
           ?>
-          <img src=<?=$key['source']?> alt="" style="width:10%">
+          <img src=<?=$src_conc?> alt="" style="width:10%">
           <p>Catégorie : <?= $categories[$key['id_categorie']-1]?></p>
           <?php endforeach; ?>
         </div>
