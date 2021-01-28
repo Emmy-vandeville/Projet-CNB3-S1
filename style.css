@@ -238,6 +238,8 @@ input{
   text-align: center;
   width: 30%;
   margin: 0 auto 2%;
+  border-radius: 5%;
+  background-color: #B0BFA0;
 
 }
 .equipe{
