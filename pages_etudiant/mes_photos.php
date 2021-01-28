@@ -42,4 +42,15 @@ else {
 
 <script src="main.js"></script>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <?php require('../includes/footer.php'); ?>
+>>>>>>> Page_Etudiant
+=======
+<?php require('../includes/footer.php'); ?>
+>>>>>>> Page_Etudiant
+=======
+<?php require('../includes/footer.php'); ?>
+>>>>>>> Page_Etudiant

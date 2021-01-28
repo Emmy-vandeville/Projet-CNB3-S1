@@ -51,3 +51,4 @@ else {
   <script src="includes/jquery-3.5.1.min.js"></script>
   <script src='includes/js_photo_promo.js'></script>
 </main>
+<?php require('../includes/footer.php'); ?>

@@ -8,7 +8,7 @@ $query->execute();
 $compte = $query->fetch();
 $query->closeCursor();
 
-$reponse = $conn->query('SELECT * FROM photo WHERE promo='.$compte['promo'].' AND team='.$compte['team'].'');
+$reponse = $conn->query('SELECT * FROM photo WHERE promo='.$compte['promo'].' AND team='.$compte['num_team'].'');
 
 while ($donnees = $reponse->fetch())
 {

@@ -27,6 +27,5 @@ require('includes/header_connexion.php');
     ?>
   </tbody>
 </table>
-<?php
-require('includes/footer.php');
-?>
+
+<?php require('includes/footer.php'); ?>
