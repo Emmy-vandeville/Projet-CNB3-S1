@@ -1,7 +1,7 @@
 <?php
 session_start();
 // On gère le header en fonction du statut
-if ($_SESSION['autorisation']=='oui') {
+/*if ($_SESSION['autorisation']=='oui') {
   switch($_SESSION['acces']){
     case 0:
       require('../includes/header_enseignant.php');
@@ -13,14 +13,10 @@ if ($_SESSION['autorisation']=='oui') {
 }
 else {
   require('../includes/header_connexion.php');;
-}?>
+}*/?>
 
 <?php
   require_once('../config/configdb.php');
-  $categories=['Larves','Vers annélides','Mollusques','Arachnides','Crustacés','Myriapodes','Chenilles','Collemboles','Orthoptères','Diptères','Lépidoptères','Nevroptères','Hymenoptères','Homoptères','Hémiptères','Coléoptères'];
-  $stat = 0;
-  /*$statut = $conn->query('SELECT * FROM compte WHERE statut =:zero');
-  $statut->bindValue(':zero', $stat, PDO::PARAM_INT);*/
   $statut = $conn->query('SELECT * FROM compte WHERE statut = 0');
   $statut->execute();
   $promo = $statut->fetch();
@@ -38,10 +34,16 @@ else {
           $photos->bindValue(':act', $i, PDO::PARAM_INT);
           $photos->execute();
           $data = $photos->fetchAll();
+
           foreach($data as $key):
+            $categorie = $conn->prepare('SELECT * FROM categorie WHERE id_categorie=:id_cat');
+            $categorie->bindValue(':id_cat', $key['id_categorie'], PDO::PARAM_INT);
+            $categorie->execute();
+            $data_cat = $categorie->fetch();
+            $cat_act = $data_cat['nom'];
           ?>
           <img src=<?=$key['source']?> alt="" style="width:10%">
-          <p>Catégorie : <?= $categories[$key['id_categorie']-1]?></p>
+          <p>Catégorie : <?= $cat_act?></p>
           <?php endforeach; ?>
         </div>
       </article>
