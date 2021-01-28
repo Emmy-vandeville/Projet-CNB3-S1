@@ -14,7 +14,7 @@ $query1->execute();
 $compte = $query1->fetch();
 $query1->closeCursor();
 
-//On va chercher l'image dans le dossier
+//On defini le dossier d'enregistrement
 $dossier = '../img/';
 $fichier = basename($_FILES['avatar']['name']);
 $taille_maxi = 1000000000;
