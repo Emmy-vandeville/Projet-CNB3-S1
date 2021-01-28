@@ -1,4 +1,20 @@
 <?php
+session_start();
+// On gère le header en fonction du statut
+if ($_SESSION['autorisation']=='oui') {
+  switch($_SESSION['acces']){
+    case 0:
+      require('../includes/header_enseignant.php');
+      break;
+    case 1:
+      require('../includes/header.php');
+      break;
+  }
+}
+else {
+  require('../includes/header_connexion.php');;
+}
+
 require_once('../config/configdb.php');
   $statut = $conn->query('SELECT * FROM compte ORDER BY promo DESC LIMIT 1');
   $statut->execute();
@@ -23,7 +39,7 @@ require_once('../config/configdb.php');
     ?>
     <tr>
         <td><?php echo $row['id_photo']?></td>
-        <td>Groupe n°<?php echo $row['promo']?></td>
+        <td>Groupe n°<?php echo $row['team']?></td>
         <td><a href="../config/download_actuel.php?id_photo=<?php echo $row['id_photo']?>">Télécharger</td>
     </tr>
     <?php
@@ -32,4 +48,5 @@ require_once('../config/configdb.php');
   </tbody>
 </table>
 <?php
+require_once('../includes/footer.php');
 ?>
