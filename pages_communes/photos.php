@@ -30,7 +30,7 @@ else {
         <h2><a class="toggleDetail" href="#">Promo <?= $i ?></a></h2>
         <div class="panel">
           <?php
-          $photos = $conn->prepare('SELECT source, promo, id_categorie FROM photo WHERE promo =:act ORDER BY id_photo DESC');
+          $photos = $conn->prepare('SELECT source, promo, id_categorie, team FROM photo WHERE promo =:act ORDER BY team DESC');
           $photos->bindValue(':act', $i, PDO::PARAM_INT);
           $photos->execute();
           $data = $photos->fetchAll();
@@ -42,8 +42,11 @@ else {
             $data_cat = $categorie->fetch();
             $cat_act = $data_cat['nom'];
           ?>
-          <img src=<?=$key['source']?> alt="" style="width:10%">
-          <p>Catégorie : <?= $cat_act?></p>
+          <div>
+            <img src=<?=$key['source']?> alt="" style="width:10%">
+            <p>Team : <?= $key['team'] ?></p>
+            <p>Catégorie : <?= $cat_act?></p>
+          </div>
           <?php endforeach; ?>
         </div>
       </article>
