@@ -95,7 +95,6 @@
 #total{
   display: block;
   text-align: center;
-  margin: 0 auto;
 }
 
 .btn_supr{
@@ -104,7 +103,17 @@
   color: white;
   border: 0;
   font-size: 150%;
-  margin: 0 auto;
+  display: block;
+  margin : auto;
+}
+.btn-env{
+  border-radius: 1rem;
+  background-color: green;
+  color: white;
+  border: 0;
+  font-size: 150%;
+  display: block;
+  margin : auto;
 }
 
 .field-photo{
@@ -112,12 +121,20 @@
   border-radius: 4%;
   display: block;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
 }
+
+.label{
+  width:100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Fin mise en page des images */
 /**/
 header {
-	text-align: center;
+    text-align: center;
   text-decoration: none;
   background-color: #6A847A;
   
@@ -126,22 +143,22 @@ header a {
     text-decoration: none;
 }
 header, footer{
-	padding: 3px;
-	box-sizing: border-box;
+    padding: 3px;
+    box-sizing: border-box;
 }
 footer {
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 40px;
-	padding-right: 40px;
-	text-decoration: none;
-	position: relative;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-decoration: none;
+    position: relative;
   bottom: 0;
 }
 footer a {
   text-decoration: none;
-	color:  #6A847A;
+    color:  #6A847A;
 }
 /* FIN */
 
@@ -220,13 +237,10 @@ input{
   text-align: center;
 }
 
-
 /* Fin code page de connexion */
 
 
 /* debut page affichage des groupes*/
-
-
 
 .id{
   
