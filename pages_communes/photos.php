@@ -28,9 +28,19 @@ else {
     <?php for($i = $max; $i>=54; $i--){?>
       <article>
         <h2><a class="toggleDetail" href="#">Promo <?= $i ?></a></h2>
+
+        <a class="export color-nav" href="../csv/promo_<?=$i?>.csv">Exporter les noms</a>
+        <?php
+        // On crée le tableau
+        $tableau=[];
+        // On défini les titres des colonnes
+        $tableau[] = array('Nom du groupe', 'Type', 'Nom latin');
+        $tableau[] = array('', '', '');
+        ?>
+
         <div class="panel">
           <?php
-          $photos = $conn->prepare('SELECT source, promo, id_categorie, team FROM photo WHERE promo =:act ORDER BY team DESC');
+          $photos = $conn->prepare('SELECT * FROM photo WHERE promo =:act ORDER BY team DESC');
           $photos->bindValue(':act', $i, PDO::PARAM_INT);
           $photos->execute();
           $data = $photos->fetchAll();
@@ -47,11 +57,26 @@ else {
             <p>Team : <?= $key['team'] ?></p>
             <p>Catégorie : <?= $cat_act?></p>
           </div>
-          <?php endforeach; ?>
+
+          <?php
+          // On réccupère les valeurs à mettre dans le fichier
+          $tableau[] = array($key['team'], $cat_act, $key['nom_latin']);
+
+          endforeach; 
+          ?>
         </div>
       </article>
     <?php } ?>
   </section>
+  <?php 
+  // On ouvre le fichier csv
+  $fichier = fopen('../csv/promo_'.$i.'.csv', 'w+');
+  fputs($fichier, '');
+  foreach($tableau as $ligne){
+    fputcsv($fichier, $ligne, ";");
+  }
+  fclose($fichier);
+  ?>
   <script src="../includes/jquery-3.5.1.min.js"></script>
   <script src='../includes/js_photo_promo.js'></script>
 </main>
