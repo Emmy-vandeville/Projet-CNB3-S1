@@ -243,11 +243,12 @@ input{
 /* debut page affichage des groupes*/
 
 .id{
-  
   text-align: center;
   width: 30%;
   margin: 0 auto 2%;
-
+  background-color: #B0BFA0;
+  border-radius: 4%;
+  display: block;
 }
 .equipe{
   margin-bottom: 5%;
