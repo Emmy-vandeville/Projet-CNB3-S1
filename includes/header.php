@@ -23,6 +23,14 @@ $topmenu[] = array(
 
 
 </head>
+
+<img
+    class = "logo"
+    src="../images_logo/logojunia.png"
+    alt="logo ISA"
+    height="100px"
+    width="250px"
+/>
 <header>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">

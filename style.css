@@ -160,6 +160,12 @@ footer a {
   text-decoration: none;
     color:  #6A847A;
 }
+
+.logo{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* FIN */
 
 /* code formulaire commun */
