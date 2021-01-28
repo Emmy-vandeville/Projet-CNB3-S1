@@ -22,6 +22,9 @@ $topmenu[] = array(
 $topmenu[] = array(
   'libelle' => 'Archives',
   'url' => getRootPath().'archives-tous.php');
+  $topmenu[] = array(
+    'libelle' => 'Téléchargement photos cette année',
+    'url' => getRootPath().'pages_etudiant/telechargement_actuel.php');
 ?>
 
 
