@@ -7,19 +7,19 @@ require('includes/header_connexion.php');
   <thead>
     <tr>
       <th>ID</th>
-      <th>filename</th>
+      <th>Numéro de promo</th>
       <th>Action</th>
     </tr>
   </thead>
   <tbody>
     <?php
-      $stmt = $bdd->prepare("SELECT * FROM photo");
+      $stmt = $bdd->prepare("SELECT * FROM archive");
       $stmt->execute();
       while($row = $stmt->fetch()){
     ?>
     <tr>
         <td><?php echo $row['id_photo']?></td>
-        <td><?php echo $row['source']?></td>
+        <td>Promo n°<?php echo $row['promo']?></td>
         <td><a href="config/download.php?id_photo=<?php echo $row['id_photo']?>">Télécharger</td>
     </tr>
     <?php
@@ -27,5 +27,6 @@ require('includes/header_connexion.php');
     ?>
   </tbody>
 </table>
-
-<?php require('includes/footer.php'); ?>
+<?php
+require('includes/footer.php');
+?>

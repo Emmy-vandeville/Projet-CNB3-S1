@@ -120,7 +120,7 @@ header {
 	text-align: center;
   text-decoration: none;
   background-color: #6A847A;
-
+  
 }
 header a {
     text-decoration: none;
@@ -130,13 +130,13 @@ header, footer{
 	box-sizing: border-box;
 }
 footer {
-	text-align: center;
-  padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 40px;
-	padding-right: 40px;
-	text-decoration: none;
-	position: relative;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-decoration: none;
+    position: relative;
   bottom: 0;
 }
 footer a {
@@ -149,7 +149,7 @@ footer a {
 form {
   max-width: 40%;
   margin-top: 5%;
-  margin-left: 30%;
+  margin-left: 30%;    
 }
 .field {
   border: 0.1rem solid grey;
@@ -197,7 +197,7 @@ input{
     text-align: center;
 }
 
-
+  
 /* FIN code formulaire */
 
 /* Debut code page de connexion */
@@ -229,7 +229,6 @@ input{
 
 
 .id{
-
   text-align: center;
   width: 30%;
   margin: 0 auto 2%;
@@ -242,18 +241,3 @@ input{
 }
 
 /* fin page affichage des groupes*/
-
-/*lien pour revenir en haut de page*/
-.lien-top {
-	margin-top:-50px;
-}
-.float-right {
-	float:right;
-	margin-left:10px;
-}
-#to_top {
-  position: fixed;
-  bottom: 8%;
-  right: 3%;
-  z-index: 1;
-}
