@@ -28,8 +28,8 @@ else {
 <form method="POST" action="ajout_photo.php" enctype="multipart/form-data">
   <fieldset class="field-photo">
     <h3 class="titreformulaire">Ajouter une photo</h3>
-     <!-- On limite le fichier à 500Ko -->
-     <input type="hidden" name="MAX_FILE_SIZE" value="500000">
+     <!-- On limite le fichier à 10Mo -->
+     <input type="hidden" name="MAX_FILE_SIZE" value="1000000000">
      <label>Fichier :</label>
      <input type="file" name="avatar">
      <button type="submit" name="envoyer" value="Envoyer le fichier">Envoyer le fichier</button>

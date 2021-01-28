@@ -17,7 +17,7 @@ $query1->closeCursor();
 //On va chercher l'image dans le dossier
 $dossier = '../img/';
 $fichier = basename($_FILES['avatar']['name']);
-$taille_maxi = 500000;
+$taille_maxi = 1000000000;
 $taille = filesize($_FILES['avatar']['tmp_name']);
 $extensions = array('.png', '.gif', '.jpg', '.jpeg, .PNG', '.GIF', '.JPG', '.JPEG');
 $extension = strrchr($_FILES['avatar']['name'], '.');
