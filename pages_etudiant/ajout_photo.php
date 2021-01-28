@@ -22,7 +22,7 @@ $taille = filesize($_FILES['avatar']['tmp_name']);
 $extensions = array('.png', '.gif', '.jpg', '.jpeg, .PNG', '.GIF', '.JPG', '.JPEG');
 $extension = strrchr($_FILES['avatar']['name'], '.');
 
-if(isset($_POST['animaux'])){
+if(isset($_POST['animaux'])){/*
      if($_POST['animaux']=="1"){
              $esp = 1;
      }
@@ -70,7 +70,8 @@ if(isset($_POST['animaux'])){
      }
      else{
           $esp = 16;
-     }
+     }*/
+     $esp = $_POST['animaux'];
 }
 
 //Début des vérifications de sécurité...
@@ -94,7 +95,7 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
      {
        $sources = "../img/$fichier";
        $promo = $compte['promo'];
-       $id_categorie = $esp; //Ajouter ici l'ID de l'espèce sélectionnée
+       //$id_categorie = $esp; //Ajouter ici l'ID de l'espèce sélectionnée
        $id_lieu = 0;
        $team = $compte['num_team'];
        $disposition = 'attachment';
@@ -104,7 +105,7 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
        $query->bindValue(':source', $sources, PDO::PARAM_STR);
        $query->bindValue(':promo', $promo, PDO::PARAM_STR);
        $query->bindValue(':team', $team, PDO::PARAM_STR);
-       $query->bindValue(':id_categorie', $id_categorie, PDO::PARAM_STR);
+       $query->bindValue(':id_categorie', $esp, PDO::PARAM_STR);
        $query->bindValue(':id_lieu', $id_lieu, PDO::PARAM_STR);
        $query->bindValue(':team', $team, PDO::PARAM_STR);
        $query->bindValue(':disposition', $disposition, PDO::PARAM_STR);

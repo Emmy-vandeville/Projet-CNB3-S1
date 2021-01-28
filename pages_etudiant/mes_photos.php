@@ -13,7 +13,16 @@ if ($_SESSION['autorisation']=='oui') {
 }
 else {
   require('../includes/header_connexion.php');;
-}?>
+}
+
+require_once('../config/configdb.php');
+
+$reponse = $conn->prepare('SELECT * FROM categorie');
+$reponse->execute();
+$espece = $reponse->fetchAll();
+$reponse->closeCursor();
+
+?>
 <body>
 
 <main class = "container">
@@ -30,7 +39,7 @@ else {
 
      <label>Fichier :</label>
      <input type="file" name="avatar">
-
+<!--
      <label for="species-select">Choisissez une espèce:</label>
      <select name="animaux" >
         <option value="">--Please choose an option--</option>
@@ -51,6 +60,17 @@ else {
         <option value="15">Hémiptères</option>
         <option value="16">Coléoptères</option>
       </select>
+-->
+
+      <p class="select-espece">   
+        <label for="species-select">Choisissez une espèce :</label>
+        <select id="esp" name="animaux">
+            <option value="">--Veuillez choisir une option--</option>
+          <?php foreach($espece as $espece):?>
+            <option value="<?= $espece['id_categorie']?>"> <?= $espece['nom'] ?></option>
+          <?php endforeach; ?>
+        </select>
+      </p>
 
       <input type="text" name="nom_latin" placeholder="Nom scientifique">
 
