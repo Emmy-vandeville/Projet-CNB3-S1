@@ -280,3 +280,126 @@ input{
   right: 3%;
   z-index: 1;
 }
+
+
+
+/* Carousel */
+.contain {
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+
+.carousel-item {
+  position: relative;
+  z-index: 5;
+  -webkit-backface-visibility: hidden;
+  /* obligatoire pour éviter l'effet de crénelage sous Chrome */
+  text-align: center;
+  width: 100%;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.carousel-item img {
+  background-color: white;
+  padding: 1em;
+  width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+
+.carousel-item h2 {
+  color: #FFF;
+  font-size: 2rem;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.carousel-item h2 {
+  text-shadow: 2px 2px #333;
+}
+
+#carousel .fas {
+  color: white;
+}
+
+#carousel #previous, #carousel #next {
+  position: absolute;
+  top: 43%;
+}
+
+#carousel #previous {
+  left: 30px;
+}
+
+#carousel #next {
+  right: 30px;
+}
+
+#carousel .carousel-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #CCC;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.carousel-nav .active {
+  background-color: #555;
+}
+
+.dot:hover {
+  background-color: #999;
+}
+
+
+
+/* Fin carousel */
+
+
+/* Debut tableau DL achives */
+
+table {
+  border: medium solid #6A847A;
+  border-collapse: collapse;
+  width: 50%;
+  text-align: center;
+  margin: 20px auto;
+  }
+  th {
+  font-family: monospace;
+  border: thin solid #B0BFA0;
+  width: 50%;
+  padding: 5px;
+  background-color: #6A847A;
+  }
+  td {
+  font-family: sans-serif;
+  border: thin solid #B0BFA0;
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+  background-color: #ffffff;
+  }
+  caption {
+  font-family: sans-serif;
+  }
+
+  /* Fin tableau DL archives*/

@@ -18,7 +18,22 @@ else {
 <main>
 
 <h2>Bienvenue sur votre espace enseignant</h2>
-
+<div class="contain">
+    <body>
+      <section id="carousel">
+        <div id="carousel-item" class="carousel-item">
+          <img src="img/chat.jpg" alt="Le chat">
+          <div class="carousel-caption">
+            <h2>Chat domestique</h2>
+          </div>
+          <a href="#" id="previous" title="Image précédente"><i class="fas fa-3x fa-angle-left"></i></a>
+          <a href="#" id="next" title="Image suivante"><i class="fas fa-3x fa-angle-right"></i></a>
+          <p class="carousel-nav align-center"></p>
+        </div>
+      </section>
+    </body>
+  </div>
 </main>
 
-<?php require_once('../includes/footer.php'); ?>
+
+<script src="../config/carousel.js"></script>
