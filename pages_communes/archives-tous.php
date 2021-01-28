@@ -4,15 +4,15 @@ session_start();
 if ($_SESSION['autorisation']=='oui') {
   switch($_SESSION['acces']){
     case 0:
-      require('includes/header_enseignant.php');
+      require('../includes/header_enseignant.php');
       break;
     case 1:
-      require('includes/header.php');
+      require('../includes/header.php');
       break;
   }
 }
 else {
-  require('includes/header_connexion.php');;
+  require('../includes/header_connexion.php');;
 }
 
 $bdd = new PDO("mysql:host=127.0.0.1;dbname=projet_cnb3_tpisa;charset=utf8","root","root");
@@ -36,7 +36,7 @@ $bdd = new PDO("mysql:host=127.0.0.1;dbname=projet_cnb3_tpisa;charset=utf8","roo
     <tr>
         <td><?php echo $row['id_photo']?></td>
         <td>Promo n°<?php echo $row['promo']?></td>
-        <td><a href="config/download.php?id_photo=<?php echo $row['id_photo']?>">Télécharger</td>
+        <td><a href="../config/download.php?id_photo=<?php echo $row['id_photo']?>">Télécharger</td>
     </tr>
     <?php
       }
@@ -44,4 +44,4 @@ $bdd = new PDO("mysql:host=127.0.0.1;dbname=projet_cnb3_tpisa;charset=utf8","roo
   </tbody>
 </table>
 
-<?php require('includes/footer.php'); ?>
+<?php require('../includes/footer.php'); ?>

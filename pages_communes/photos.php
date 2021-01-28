@@ -4,27 +4,27 @@ session_start();
 if ($_SESSION['autorisation']=='oui') {
   switch($_SESSION['acces']){
     case 0:
-      require('includes/header_enseignant.php');
+      require('../includes/header_enseignant.php');
       break;
     case 1:
-      require('includes/header.php');
+      require('../includes/header.php');
       break;
   }
 }
 else {
-  require('includes/header_connexion.php');;
+  require('../includes/header_connexion.php');;
 }?>
 
 <?php
-  require_once('config/configdb.php');
+  require_once('../config/configdb.php');
   $categories=['Larves','Vers annélides','Mollusques','Arachnides','Crustacés','Myriapodes','Chenilles','Collemboles','Orthoptères','Diptères','Lépidoptères','Nevroptères','Hymenoptères','Homoptères','Hémiptères','Coléoptères'];
   $stat = 0;
   /*$statut = $conn->query('SELECT * FROM compte WHERE statut =:zero');
   $statut->bindValue(':zero', $stat, PDO::PARAM_INT);*/
-  $statut = $conn->query('SELECT * FROM compte ORDER BY promo DESC LIMIT 1');
+  $statut = $conn->query('SELECT * FROM compte WHERE statut = 0');
   $statut->execute();
   $promo = $statut->fetch();
-  $max = $promo['promo'];
+  $max =  $promo['promo'];
 ?>
 <main>
 
@@ -48,6 +48,6 @@ else {
       </article>
     <?php } ?>
   </section>
-  <script src="includes/jquery-3.5.1.min.js"></script>
-  <script src='includes/js_photo_promo.js'></script>
+  <script src="../includes/jquery-3.5.1.min.js"></script>
+  <script src='../includes/js_photo_promo.js'></script>
 </main>

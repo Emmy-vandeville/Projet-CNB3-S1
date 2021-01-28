@@ -20,13 +20,16 @@ $topmenu[] = array(
   'url' => getRootPath().'pages_etudiant/mes_photos.php');
 $topmenu[] = array(
   'libelle' => 'Photos des autres groupes',
-  'url' => getRootPath().'photos.php');
+  'url' => getRootPath().'pages_communes/photos.php');
 $topmenu[] = array(
   'libelle' => 'Archives',
-  'url' => getRootPath().'archives-tous.php');
-  $topmenu[] = array(
-    'libelle' => 'Téléchargement photos cette année',
-    'url' => getRootPath().'pages_etudiant/telechargement_actuel.php');
+  'url' => getRootPath().'pages_communes/archives-tous.php');
+ $topmenu[] = array(
+  'libelle' => 'Téléchargement photos cette année',
+  'url' => getRootPath().'pages_etudiant/telechargement_actuel.php');
+$topmenu[] = array(
+  'libelle' => 'Déconnexion',
+  'url' => getRootPath().'config/deconnexion.php');
 ?>
 
 
