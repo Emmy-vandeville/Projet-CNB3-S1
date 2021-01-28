@@ -36,7 +36,6 @@ $topmenu[] = array(
 
 
 </head>
-
 <img
     class = "logo"
     src="../images_logo/logojunia.png"
