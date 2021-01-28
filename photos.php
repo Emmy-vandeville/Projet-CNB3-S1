@@ -49,3 +49,4 @@ else {
   </section>
 
 </main>
+<?php require('../includes/footer.php'); ?>

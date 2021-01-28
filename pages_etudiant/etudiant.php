@@ -20,7 +20,4 @@ else {
   <a href="config/deconnexion.php">Déconnexion</a>
 </body>
 
-
-
-
-
+<?php require('../includes/footer.php'); ?>
