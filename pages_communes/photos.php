@@ -82,7 +82,6 @@ else {
   <table>
     <thead>
       <tr>
-        <th>ID</th>
         <th>Numéro de promo</th>
         <th>Téléchargement</th>
       </tr>
@@ -94,7 +93,6 @@ else {
         while($row = $stmt->fetch()){
       ?>
       <tr>
-          <td><?php echo $row['id_photo']?></td>
           <td>Promo n°<?php echo $row['promo']?></td>
           <td><a href="../config/download.php?id_photo=<?php echo $row['id_photo']?>"><i class="fas fa-download"></i></td>
       </tr>
