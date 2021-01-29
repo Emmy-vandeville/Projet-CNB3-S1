@@ -24,7 +24,7 @@ $bdd = new PDO("mysql:host=127.0.0.1;dbname=projet_cnb3_tpisa;charset=utf8","roo
     <tr>
       <th>ID</th>
       <th>Numéro de promo</th>
-      <th>Action</th>
+      <th>Télechargement</th>
     </tr>
   </thead>
   <tbody>
@@ -36,7 +36,7 @@ $bdd = new PDO("mysql:host=127.0.0.1;dbname=projet_cnb3_tpisa;charset=utf8","roo
     <tr>
         <td><?php echo $row['id_photo']?></td>
         <td>Promo n°<?php echo $row['promo']?></td>
-        <td><a href="../config/download.php?id_photo=<?php echo $row['id_photo']?>">Télécharger</td>
+        <td><a href="../config/download.php?id_photo=<?php echo $row['id_photo']?>"><i class="fas fa-arrow-down"></i></td>
     </tr>
     <?php
       }
