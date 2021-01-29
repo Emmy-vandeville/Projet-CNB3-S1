@@ -36,7 +36,7 @@ require_once("../config/configdb.php");
     <tr>
         <td><?php echo $row['id_photo']?></td>
         <td>Promo n°<?php echo $row['promo']?></td>
-        <td><a href="../config/download.php?id_photo=<?php echo $row['id_photo']?>"><i class="fas fa-arrow-down"></i></td>
+        <td><a href="../config/download.php?id_photo=<?php echo $row['id_photo']?>"><i class="fas fa-download"></i></td>
     </tr>
     <?php
       }
