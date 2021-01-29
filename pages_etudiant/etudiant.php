@@ -16,7 +16,7 @@ else {
 }?>
 
 <main>
-  <h2> Bienvenue sur votre espace étudiant </h1>
+  <h2> Bienvenue sur votre espace étudiant </h2>
   <div class="contain">
     <body>
       <section id="carousel">
