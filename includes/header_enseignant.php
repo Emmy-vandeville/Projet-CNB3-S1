@@ -28,6 +28,9 @@ $topmenu[] = array(
   'libelle' => 'Affichage des groupes',
   'url' => getRootPath().'pages_enseignant/affichage_grp.php');
 $topmenu[] = array(
+  'libelle' => 'Archives',
+  'url' => getRootPath().'pages_communes/archives-tous.php');
+$topmenu[] = array(
   'libelle' => 'Déconnexion',
   'url' => getRootPath().'config/deconnexion.php');
 ?>

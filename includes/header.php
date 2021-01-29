@@ -28,6 +28,9 @@ $topmenu[] = array(
   'libelle' => 'Téléchargement photos cette année',
   'url' => getRootPath().'pages_etudiant/telechargement_actuel.php');
 $topmenu[] = array(
+  'libelle' => 'Archives',
+  'url' => getRootPath().'pages_communes/archives-tous.php');
+$topmenu[] = array(
   'libelle' => 'Déconnexion',
   'url' => getRootPath().'config/deconnexion.php');
 ?>

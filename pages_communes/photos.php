@@ -79,30 +79,6 @@ else {
       ?>
     <?php } ?>
   </section>
-  <table>
-    <thead>
-      <tr>
-        <th>Numéro de promo</th>
-        <th>Téléchargement</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php
-        $stmt = $conn->prepare("SELECT * FROM archive");
-        $stmt->execute();
-        while($row = $stmt->fetch()){
-      ?>
-      <tr>
-          <td>Promo n°<?php echo $row['promo']?></td>
-          <td><a href="../config/download.php?id_photo=<?php echo $row['id_photo']?>"><i class="fas fa-download"></i></td>
-      </tr>
-      <?php
-        }
-      ?>
-    </tbody>
-  </table>
-
-
 
   <script src="../includes/jquery-3.5.1.min.js"></script>
   <script src='../includes/js_photo_promo.js'></script>
