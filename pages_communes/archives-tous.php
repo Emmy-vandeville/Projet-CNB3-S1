@@ -24,7 +24,7 @@ $bdd = new PDO("mysql:host=127.0.0.1;dbname=projet_cnb3_tpisa;charset=utf8","roo
     <tr>
       <th>ID</th>
       <th>Numéro de promo</th>
-      <th>Télechargement</th>
+      <th>Téléchargement</th>
     </tr>
   </thead>
   <tbody>
