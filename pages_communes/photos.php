@@ -26,7 +26,7 @@ else {
   <section id="accordeon">
     <?php for($i = $max; $i>=54; $i--){?>
       <article>
-        <h2><a class="toggleDetail">Promo <?= $i ?></a></h2> 
+        <h2><a class="toggleDetail">Promo <?= $i ?></a></h2>
 
         <?php
         // On crée le tableau
@@ -50,7 +50,7 @@ else {
             $cat_act = $data_cat['nom'];
           ?>
           <div class="display_pic">
-            <img class="img_promos" src=<?=$key['source']?> alt="" style="width:90%"> 
+            <img class="img_promos" src=<?=$key['source']?> alt="" style="width:90%">
             <p>Team : <?= $key['team'] ?></p>
             <p>Catégorie : <?= $cat_act?></p>
           </div>
@@ -59,16 +59,16 @@ else {
           // On réccupère les valeurs à mettre dans le fichier
           $tableau[] = array($key['team'], $cat_act, $key['nom_latin']);
 
-          endforeach; 
+          endforeach;
           ?>
           </div>
-      
+
           <!-- Lien de téléchargement du csv -->
           <p class="dl-noms"><a class="export color-nav" href="../csv/promo_<?=$i?>.csv"><i class="fas fa-download"></i> Exporter les noms</p></a>
-          
-        
+
+
       </article>
-      <?php 
+      <?php
       // On ouvre le fichier csv
       $fichier = fopen('../csv/promo_'.$i.'.csv', 'w+');
       fputs($fichier, '');
@@ -79,6 +79,30 @@ else {
       ?>
     <?php } ?>
   </section>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Numéro de promo</th>
+        <th>Téléchargement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+        $stmt = $conn->prepare("SELECT * FROM archive");
+        $stmt->execute();
+        while($row = $stmt->fetch()){
+      ?>
+      <tr>
+          <td><?php echo $row['id_photo']?></td>
+          <td>Promo n°<?php echo $row['promo']?></td>
+          <td><a href="../config/download.php?id_photo=<?php echo $row['id_photo']?>"><i class="fas fa-download"></i></td>
+      </tr>
+      <?php
+        }
+      ?>
+    </tbody>
+  </table>
 
 
 
