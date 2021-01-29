@@ -40,7 +40,7 @@ require_once('../config/configdb.php');
     <tr>
         <td><?php echo $row['id_photo']?></td>
         <td>Groupe n°<?php echo $row['team']?></td>
-        <td><a href="../config/download_actuel.php?id_photo=<?php echo $row['id_photo']?>">Télécharger</td>
+        <td><a href="../config/download_actuel.php?id_photo=<?php echo $row['id_photo']?>"><i class="fas fa-arrow-down"></i></td>
     </tr>
     <?php
       }

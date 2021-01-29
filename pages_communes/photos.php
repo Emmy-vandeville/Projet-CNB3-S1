@@ -17,7 +17,7 @@ else {
 
 <?php
   require_once('../config/configdb.php');
-  $statut = $conn->query('SELECT * FROM compte WHERE statut = 0');
+  $statut = $conn->query('SELECT * FROM compte ORDER BY promo DESC LIMIT 1');
   $statut->execute();
   $promo = $statut->fetch();
   $max =  $promo['promo'];
@@ -49,7 +49,7 @@ else {
             $data_cat = $categorie->fetch();
             $cat_act = $data_cat['nom'];
           ?>
-          <div>
+          <div class="display_pic">
             <img src=<?=$key['source']?> alt="" style="width:10%">
             <p>Team : <?= $key['team'] ?></p>
             <p>Catégorie : <?= $cat_act?></p>
