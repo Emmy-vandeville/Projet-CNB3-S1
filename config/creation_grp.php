@@ -25,7 +25,7 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
   }
 
 
-  // Mise à jour de la promotion actuel suite à la création de nouveau groupe
+  // Mise à jour de la promotion actuelle suite à la création de nouveaux groupes
   if(!empty($_SESSION['id'])){
     $pdo = $conn->prepare('UPDATE compte SET promo=:promo WHERE id_compte=:id_compte');
     $pdo->bindValue(':promo', $promo, PDO::PARAM_INT);
@@ -34,13 +34,12 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
   }
 
 
-  // Création de $nb_grp compte pour les élèves
+  // Création de $nb_grp comptes pour les élèves
   $query = $conn->prepare('INSERT INTO compte (`login`, `mdp`, `mdp_aes`, `statut`, `promo`, `num_team`) VALUES (?, ?, ?, ?, ?, ?)');
   for ($i=1; $i<= $nb_grp; $i++) {
       $num_team = $i;
       $login = 'team'.$i.$promo;
       $mdp = Genere_Password(10);
-      //echo $mdp;
       // On crypte le mot de passe
       $passwordhash = hash('sha256', $mdp);
       $passwordAes = ssl_encode($mdp, $key);
@@ -51,5 +50,5 @@ if (isset($_POST['ajout'])){ // Test appuie sur bouton ajout dans page nouveau_g
   $conn = NULL;
 // Envoie vers la page d'affichage de compte
   header('location: ../pages_enseignant/affichage_grp.php');
-} //else {header('location: ../index.php');}
+}
 ?>

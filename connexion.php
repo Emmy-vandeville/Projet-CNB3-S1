@@ -1,14 +1,9 @@
 <?php
-/*session_start();
-if ($_SESSION['autorisation']=='oui') {
-  header('location:index.php');
-  exit;
-}*/
 require('includes/header_connexion.php');
 require('config/configdb.php');
 session_start();
 
-$conn = mysqli_connect("localhost","root","","projet_cnb3_tpisa");
+$conn = mysqli_connect("localhost","root","root","projet_cnb3_tpisa");
 
 if (isset($_POST['username'])){
 	$username = stripslashes($_REQUEST['username']);
@@ -16,11 +11,13 @@ if (isset($_POST['username'])){
 	$_SESSION['username'] = $username;
 	$password = stripslashes($_REQUEST['password']);
 	$password = mysqli_real_escape_string($conn, $password);
+	// On récupère dans la base de données les info du compte ou login et mot de passe haché sont égaux à ceux entrés
     $query = "SELECT * FROM `compte` WHERE login='$username' and mdp='".hash('sha256', $password)."'";
 	$result = mysqli_query($conn,$query) or die(mysql_error());
 
 	if (mysqli_num_rows($result) == 1) {
 		$user = mysqli_fetch_assoc($result);
+		// Création des sessions
 		$_SESSION['autorisation'] = 'oui';
 		$_SESSION['acces'] = $user['statut'];
 		$_SESSION['id'] = $user['id_compte'];
@@ -36,6 +33,7 @@ if (isset($_POST['username'])){
 }
 ?>
 <main>
+<!-- Formulaire de connexion -->
 <form class="box" action="" method="post" name="login">
 	<fieldset class="field">
 	<h1 class="box-title">Connexion</h1>
@@ -49,9 +47,9 @@ if (isset($_POST['username'])){
 	</div>
 	<input type="submit" value="Connexion " name="submit" class="box-button">
 
-<?php if (! empty($message)) { ?>
-    <p class="errorMessage"><?php echo $message; ?></p>
-<?php } ?>
+	<?php if (! empty($message)) { ?>
+		<p class="errorMessage"><?php echo $message; ?></p>
+	<?php } ?>
 	</fieldset>
 </form>
 </main>

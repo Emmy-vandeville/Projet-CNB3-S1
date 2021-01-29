@@ -14,6 +14,7 @@
 
 require_once('fonction.php');
 
+// Array contenant chaque libelle avec nom et pages de redirection
 $topmenu[] = array(
   'libelle' => 'Accueil',
   'url' => getRootPath().'pages_enseignant/enseignant.php');

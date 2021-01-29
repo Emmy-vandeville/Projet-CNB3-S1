@@ -27,6 +27,7 @@ else {
     <?php for($i = $max; $i>=54; $i--){?>
       <article>
         <h2><a class="toggleDetail" href="#">Promo <?= $i ?></a></h2>
+
         <?php
         // On crée le tableau
         $tableau=[];
@@ -66,18 +67,19 @@ else {
 
         </div>
       </article>
+      <?php 
+      // On ouvre le fichier csv
+      $fichier = fopen('../csv/promo_'.$i.'.csv', 'w+');
+      fputs($fichier, '');
+      foreach($tableau as $ligne){
+        fputcsv($fichier, $ligne, ";");
+      }
+      fclose($fichier);
+      ?>
     <?php } ?>
   </section>
 
-  <?php 
-  // On ouvre le fichier csv
-  $fichier = fopen('../csv/promo_'.$i.'.csv', 'w+');
-  fputs($fichier, '');
-  foreach($tableau as $ligne){
-    fputcsv($fichier, $ligne, ";");
-  }
-  fclose($fichier);
-  ?>
+
 
   <script src="../includes/jquery-3.5.1.min.js"></script>
   <script src='../includes/js_photo_promo.js'></script>

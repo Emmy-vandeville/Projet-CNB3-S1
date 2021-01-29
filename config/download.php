@@ -1,8 +1,9 @@
 <?php
-    $bdd = new PDO("mysql:host=127.0.0.1;dbname=projet_cnb3_tpisa;charset=utf8","root","");
+    require_once("configdb.php");
     if(isset($_GET['id_photo'])){
+        // On récupère l'id de la photo passée en methode get
         $id = $_GET['id_photo'];
-        $stat = $bdd->prepare("SELECT * FROM archive WHERE id_photo=?");
+        $stat = $conn->prepare("SELECT * FROM archive WHERE id_photo=?");
         $stat-> BindParam(1, $id);
         $stat->execute();
         $data = $stat->fetch();

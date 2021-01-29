@@ -1,4 +1,5 @@
 <?php
+// Fonction endodage variable à l'aide d'une clé
 function ssl_encode($data, $key) {
     $ivlen = openssl_cipher_iv_length($cipher="AES-256-CBC");
     $iv = openssl_random_pseudo_bytes($ivlen);
@@ -9,6 +10,7 @@ function ssl_encode($data, $key) {
     return(base64_encode( $iv.$hmac.$ciphertext_raw ));
 }
 
+// Fonction de décodage variable à l'aide d'une clé
 function ssl_decode($data, $key) {
     $c = base64_decode($data);
     $ivlen = openssl_cipher_iv_length($cipher="AES-256-CBC");
@@ -21,6 +23,7 @@ function ssl_decode($data, $key) {
     else return false;
 }
 
+// clé utilisée
 $key = 's5v8y/B?D(G+KbPeShVmYq3t6w9z$C&F)H@McQfTjWnZr4u7x!A%D*G-KaNdRgUk';
 
 ?>
