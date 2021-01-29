@@ -17,7 +17,7 @@ else {
 
 <?php
   require_once('../config/configdb.php');
-  $statut = $conn->query('SELECT * FROM compte WHERE statut = 0');
+  $statut = $conn->query('SELECT * FROM compte ORDER BY promo DESC LIMIT 1');
   $statut->execute();
   $promo = $statut->fetch();
   $max =  $promo['promo'];
