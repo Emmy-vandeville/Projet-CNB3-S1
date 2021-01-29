@@ -3,7 +3,7 @@ require('includes/header_connexion.php');
 require('config/configdb.php');
 session_start();
 
-$conn = mysqli_connect("localhost","root","root","projet_cnb3_tpisa");
+$conn = mysqli_connect("localhost","root","","projet_cnb3_tpisa");
 
 if (isset($_POST['username'])){
 	$username = stripslashes($_REQUEST['username']);
