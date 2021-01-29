@@ -14,12 +14,22 @@ const DELAI = 3000;
 const slides =
 [
   {
-    image: '../carousel/anelide.jpg',
-    
+    image: '../carousel/ISA1.jpg', 
   },
   {
-    image: '../carousel/ver.jpg',
-   
+    image: '../carousel/vaches.jpg',
+  },
+  {
+    image: '../carousel/isa.jpeg',
+  },
+  {
+    image: '../carousel/isa2.jpg',
+  },
+  {
+    image: '../carousel/isa3.jpg',
+  },
+  {
+    image: '../carousel/isa4.jpg',
   },
 ];
 let maxSlides = slides.length;
