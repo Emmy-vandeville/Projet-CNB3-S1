@@ -413,3 +413,30 @@ h2{
 }
 
   /* Fin page d'accueil*/
+
+/* Page photos */
+
+.panel{ 
+  display:flex; 
+  flex-wrap: wrap; 
+} 
+.img_promos{ 
+  border-radius: 1%; 
+} 
+article>h2{ 
+  font-family: calibri; 
+  background-color: #48a240; 
+  border-radius: 8px; 
+  color: white; 
+  cursor:pointer; 
+} 
+.display_pic{ 
+  text-align: center; 
+  background-color: #EEEEEE; 
+  padding-top: 2%; 
+  margin: 0 auto; 
+  font-family: calibri; 
+  border-radius: 1%; 
+} 
+
+/* FIN page photos */

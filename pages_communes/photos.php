@@ -26,7 +26,7 @@ else {
   <section id="accordeon">
     <?php for($i = $max; $i>=54; $i--){?>
       <article>
-        <h2><a class="toggleDetail" href="#">Promo <?= $i ?></a></h2>
+        <h2><a class="toggleDetail">Promo <?= $i ?></a></h2> 
 
         <?php
         // On crée le tableau
@@ -50,7 +50,7 @@ else {
             $cat_act = $data_cat['nom'];
           ?>
           <div class="display_pic">
-            <img src=<?=$key['source']?> alt="" style="width:10%">
+            <img class="img_promos" src=<?=$key['source']?> alt="" style="width:90%"> 
             <p>Team : <?= $key['team'] ?></p>
             <p>Catégorie : <?= $cat_act?></p>
           </div>
