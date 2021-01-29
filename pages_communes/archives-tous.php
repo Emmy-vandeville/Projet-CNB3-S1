@@ -12,10 +12,10 @@ if ($_SESSION['autorisation']=='oui') {
   }
 }
 else {
-  require('../includes/header_connexion.php');;
+  require('../includes/header_connexion.php');
 }
 
-$bdd = new PDO("mysql:host=127.0.0.1;dbname=projet_cnb3_tpisa;charset=utf8","root","root");
+require_once("../config/configdb.php");
 ?>
 
 
@@ -29,7 +29,7 @@ $bdd = new PDO("mysql:host=127.0.0.1;dbname=projet_cnb3_tpisa;charset=utf8","roo
   </thead>
   <tbody>
     <?php
-      $stmt = $bdd->prepare("SELECT * FROM archive");
+      $stmt = $conn->prepare("SELECT * FROM archive");
       $stmt->execute();
       while($row = $stmt->fetch()){
     ?>

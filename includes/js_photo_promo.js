@@ -7,14 +7,10 @@ $(function () {
     if($(this).next('.panel').is(':hidden')){
       //on fait apparaitre l'article
       $(this).next('.panel').slideDown();
-      //on change l'icone
-      //$(this).children('i').removeClass('fa-caret-down').addClass('fa-caret-up');
     }
     //sinon s'il est affiché on le cache
     else{
       $(this).next('.panel').slideUp();
-      //et on change d'icone
-      //$(this).children('i').removeClass('fa-caret-up').addClass('fa-caret-down');
     }
   })
 });

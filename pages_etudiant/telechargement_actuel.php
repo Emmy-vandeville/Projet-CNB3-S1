@@ -27,7 +27,7 @@ require_once('../config/configdb.php');
     <tr>
       <th>ID</th>
       <th>Groupe</th>
-      <th>Action</th>
+      <th>Téléchargement</th>
     </tr>
   </thead>
   <tbody>

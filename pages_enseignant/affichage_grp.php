@@ -19,14 +19,14 @@ else {
 require_once('../config/configdb.php');
 require_once('../config/aes256.php');
 
-// On récuppère les informations du compte utilisateur (compte enseignant)
+// On récupère les informations du compte utilisateur (compte enseignant)
 $query = $conn->prepare('SELECT * FROM compte WHERE id_compte=id_compte');
 $query->bindValue(':id_compte', $_SESSION['id_compte'], PDO::PARAM_INT);
 $query->execute();
 $compte_enseignant = $query->fetch();
 $query->closeCursor();
 
-// On réccupère les compte élèves de la promo en cours (promo de l'enseignant)
+// On récupère les comptes élèves de la promo en cours (promo de l'enseignant)
 $compte = $conn -> query('SELECT * FROM compte WHERE promo='.$compte_enseignant['promo'].' AND statut=1');
 ?>
 

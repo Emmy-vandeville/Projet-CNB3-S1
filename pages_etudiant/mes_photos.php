@@ -39,29 +39,8 @@ $reponse->closeCursor();
 
      <label>Fichier :</label>
      <input type="file" name="avatar">
-<!--
-     <label for="species-select">Choisissez une espèce:</label>
-     <select name="animaux" >
-        <option value="">--Please choose an option--</option>
-        <option value="1" >Larves</option>
-        <option value="2" >Vers annélides</option>
-        <option value="3" >Mollusques</option>
-        <option value="4" >Arachnides</option>
-        <option value="5" >Crustacés</option>
-        <option value="6" >Myriapodes</option>
-        <option value="7" >Chenilles</option>
-        <option value="8" >Collenboles</option>
-        <option value="9" >Orthoptères</option>
-        <option value="10">Diptères</option>
-        <option value="11">Lépidoptères</option>
-        <option value="12">Nevroptères</option>
-        <option value="13">Hymenoptères</option>
-        <option value="14">Homoptères</option>
-        <option value="15">Hémiptères</option>
-        <option value="16">Coléoptères</option>
-      </select>
--->
 
+      <!-- Le select prend en option les éléments de la table categorie -->
       <p class="select-espece">   
         <label for="species-select">Choisissez une espèce :</label>
         <select id="esp" name="animaux">
@@ -80,7 +59,7 @@ $reponse->closeCursor();
 
 <p id="total"> Vous allez supprimer <span>0</span> photo(s) </p>
 
-  <form method="post" action="supprimer.php"> <!-- get c'est quand on passe par l'URL, or ce n'est pas ce qu'on veut donc on passe par post-->
+  <form method="post" action="supprimer.php"> <!-- get c'est quand on passe par l'URL, or ce n'est pas ce qu'on veut donc on passe par post -->
       <button type="submit" class="btn_supr">Supprimer</button>
       <input type="hidden" id="jsonId" name="id" value='[]'/>
   </form>

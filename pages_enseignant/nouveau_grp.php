@@ -16,6 +16,7 @@ else {
 }?>
 
 <main>
+<!-- Formulaire de création de groupe -->
 <form method="POST" action="../config/creation_grp.php" class="form">
     <fieldset class="field">
       <h3 class="titreformulaire">Créer de nouveaux groupes</h3>
@@ -30,9 +31,4 @@ else {
       <button type="add" name="ajout" class="btn_nv_grp">Créer</button>
     </fieldset>
 </form>
-  <?php /*
-    if(isset($erreur)) {
-       echo '<font color="red">'.$erreur."</font>";
-    }*/
-  ?>
 </main>
