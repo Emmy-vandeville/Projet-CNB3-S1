@@ -248,8 +248,6 @@ input{
 
 /* debut page affichage des groupes*/
 
-
-
 .id{
   text-align: center;
   width: 35%;
@@ -289,8 +287,6 @@ input{
   margin: 0 auto;
 
 }
-
-
 
 .carousel-item {
   position: relative;
@@ -425,7 +421,7 @@ h2{
 } 
 article>h2{ 
   font-family: calibri; 
-  background-color: #48a240; 
+  background-color: #B0BFA0; 
   border-radius: 8px; 
   color: white; 
   cursor:pointer; 
@@ -434,9 +430,29 @@ article>h2{
   text-align: center; 
   background-color: #EEEEEE; 
   padding-top: 2%; 
-  margin: 0 auto; 
+  display:block;
+  margin-left: auto;
+  margin-right: auto; 
   font-family: calibri; 
   border-radius: 1%; 
+  margin-top: 2%;
 } 
 
+.dl-noms{
+  text-align:center;
+}
+
+.color-nav{
+  text-decoration: none;
+  color:#B0BFA0;
+}
+
 /* FIN page photos */
+
+/* icones téléchargement*/
+
+.fa-download{
+  color: #B0BFA0;
+}
+
+/* FIN icones téléchargement*/

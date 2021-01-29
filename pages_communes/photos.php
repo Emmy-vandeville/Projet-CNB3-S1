@@ -61,11 +61,12 @@ else {
 
           endforeach; 
           ?>
-
+          </div>
+      
           <!-- Lien de téléchargement du csv -->
-          <a class="export color-nav" href="../csv/promo_<?=$i?>.csv">Exporter les noms</a>
-
-        </div>
+          <p class="dl-noms"><a class="export color-nav" href="../csv/promo_<?=$i?>.csv"><i class="fas fa-download"></i> Exporter les noms</p></a>
+          
+        
       </article>
       <?php 
       // On ouvre le fichier csv
